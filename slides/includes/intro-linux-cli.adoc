@@ -47,7 +47,7 @@ Arbre :
 * `/` comme separateur
 
 
-# Exercices système de fichier
+## Exercices système de fichier
 
 avec ls, cd, touch, mkdir, mv, cp et rm
 
