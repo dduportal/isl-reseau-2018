@@ -13,6 +13,7 @@ Présentation disponible à l'URL link:{presentationUrl}[]
 ** link:https://traefik.io/[Træfik]'s Developer Advocate @
 link:https://containo.us/[Containous] et Freelancer
 ** Former Training Engineer @ CloudBees
+* mailto:damien.duportal@gmail.com[icon:envelope[] damien.duportal@gmail.com]
 * link:https://twitter.com/DamienDuportal[icon:twitter[] @DamienDuportal]
 * link:https://github.com/dduportal[icon:github[] dduportal]
 
@@ -36,6 +37,7 @@ image::containous-logo.png["Containous Logo"]
 // ///////////////////////
 :leveloffset: +1
 
+include::./includes/intro-linux-cli.adoc[]
 
 :leveloffset: -1
 

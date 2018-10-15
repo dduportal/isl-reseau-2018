@@ -1,6 +1,10 @@
 
 # Introduction à la Ligne de commande Linux
 
+## Linux
+
+image::tux.png[height=500]
+
 ## Commande
 
 « verbe »
