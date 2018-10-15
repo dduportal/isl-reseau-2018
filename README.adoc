@@ -1,0 +1,77 @@
+
+= Introduction au Réseau - Institut Saint Laurent - 2018
+
+== Comment contribuer à cette présentation ?
+
+=== Pré-requis
+
+* Vous avez besoin de:
+** Docker CE 18.05+
+** docker-compose dans votre `$PATH`
+** GNU Make dans votre `$PATH`
+
+== Générer les slides
+
+* Générer les slides en "une seule fois"
+** Cloner le dépôt
+** Exécuter la commande suivante :
++
+[source,bash]
+----
+make build
+----
+
+** Vous pouvez maintenant ouvrir le fichier `./dist/index.html`
+
+=== Travailler sur les slides en mode local avec live-reload
+
+* Cloner le dépôt
+* Exécuter la commande suivante :
++
+[source,bash]
+----
+make serve
+----
+
+* Ouvrir l'URL link:http://localhost:8000[]
+* Éditez un des fichiers de contenu en `*.adoc`, enregistrez le changement
+, et constatez que la page se recharge dynamiquement avec votre modification.
+
+=== Vérifier le HTML généré
+
+Vous pouvez vérifier que les slides générées en HTML sont bien valides w3c,
+et que les liens HTTPs sont bons.
+
+Si vous avez déjà généré un fichier `./dist/index.html`,
+Exécutez la commande suivante :
++
+[source,bash]
+----
+make verify
+----
+
+Sinon, vous pouvez exécuter la commande suivante qui se charge de tout faire:
++
+[source,bash]
+----
+make all
+----
+//
+// === Maintenance tasks inside the container
+//
+// If you want to get a shell inside the "build and serve" container,
+// run the following `make` command:
+// +
+// [source,bash]
+// ----
+// make shell
+// ----
+//
+// ==== Example: updating the package.json (and lock) depencies
+//
+// [source,bash]
+// ----
+// make shell
+// /app # ncu -u
+// ...
+// ----
