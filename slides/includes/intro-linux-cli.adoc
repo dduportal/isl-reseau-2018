@@ -1,0 +1,80 @@
+
+# Introduction à la Ligne de commande Linux
+
+## Commande
+
+« verbe »
+
+
+## Arguments
+
+Compléments d'Objets
+
+## Options
+
+«  adverbes » pour nuance qui peut avoir des arguments lui même
+
+## Examples
+
+ls
+
+
+## Kit de survie
+
+Valider avec entrée
+
+Supercommandes: CTRL-* (C, E, A, R, D)
+
+## Exercice
+
+Ouvrir une console
+
+## Système de fichier
+
+Arbre :
+
+* Racine (`/`)
+* Branches (dossiers)
+* feuilles (fichiers)
+
+
+## Parcours du système de fichier
+
+* `/` comme separateur
+
+
+# Exercices système de fichier
+
+avec ls, cd, touch, mkdir, mv, cp et rm
+
+## Fichiers spéciaux : liens symboliques et durs avec ln
+
+## Utilisateurs
+
+obligatoire; rien d'anonyme !
+
+## Superutilisateur
+
+`root`
+
+## Groupe
+
+## Annuaire d'Utilisateurs
+
+Liste dans /etc/passwd
+Groupes dans /etc/group
+
+## Utilisateurs et système de fichiers
+
+Droits sur les fichiers : owner, group, others.
+
+## Codage des droits sur le système de fichiers
+
+* Binaire
+* Decimal
+* Codé
+
+## Exercices droits sur le système de fichiers
+
+* Ls -l en exemple
+* chmod et chgrp
