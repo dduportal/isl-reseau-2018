@@ -1,0 +1,58 @@
+
+= Introduction au Réseau
+
+== Quel est le problème ?
+
+On souhaite transmettre de l'information entre 2 acteurs éloignés.
+
+== Un peu d'histoire...
+
+* Solution simple: les **Sémaphores**
+** Ça fonctionne bien !
+** Problème: information transmise trop simple
+
+== Un peu d'histoire...
+
+* Courrier / Lettres
+
+== Un peu d'histoire...
+
+[%step]
+* Télégraphe Optique
+** "Super Sémpahore"
+* Télégraphe Electrique
+** 26 Lettres: 26 fils ?
+
+== Problématiques
+
+[%step]
+* Quantité d'information à transmettre
+* Intégrité de l'information (corruption ?)
+* Rapidité de transmission
+
+== Problématiques: Quantité
+
+[%step]
+* Découper
+* Compresser
+
+== Problématiques: Intégrité
+
+[%step]
+* Diluer
+* Protéger
+
+== Descartes ?
+
+image:hal-replace-light-bulb.gif[height=500]
+
+== Descartes
+
+* Découper un gros problème en sous-problèmes
+* "Esprit Cartésien"
+* _Faire une seule chose, mais bien la faire_
+
+
+// Notes et drafts
+// http://www.bortzmeyer.org/cryptage-n-existe-pas.html
+// http://www.ryfe.fr/2011/08/les-mots-crypter-et-cryptage-n%E2%80%99existent-pas/
