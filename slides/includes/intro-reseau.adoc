@@ -5,23 +5,66 @@
 
 On souhaite transmettre de l'information entre 2 acteurs éloignés.
 
-== Un peu d'histoire...
+== Solution simple : Les Sémaphores
 
-* Solution simple: les **Sémaphores**
-** Ça fonctionne bien !
-** Problème: information transmise trop simple
+video::i6LGJ7evrAg[youtube, start=87, options="autoplay,loop"]
 
-== Un peu d'histoire...
+== Limites des Sémaphores
 
-* Courrier / Lettres
+* *Information trop simple*: allumé ou éteint
+* Logistique nécessaire:
+** Il faut se mettre d'accord au préalable
+** Fragilité du "réseau"
+* Quid de la confidentialité ?
+
+== Meilleure solution: Signaux de fumée
+
+image::13-03-13-vatican-Francois.jpg[height=300]
+
+[.small]#source: http://www.leplacide.com[]#
+
+
+[NOTE.speaker]
+--
+* Fumée Blanche: pape élu
+* Fumée Blanche: pas de décision
+* Pas de fumée: attendre? ou problème?
+* Feu: GROS problème
+--
+
+== Signaux de fumée: principes
+
+* *Encodage de l'information* dans un dictionnaire
+** On doit partager ce dictionnaire
+** Possibilité de chiffrer les messages
+* Meilleure quantité d'information portée
+
+== Limites des signaux de fumée
+
+[.stretch]
+image::lucky-luke-fumee.jpg[]
+
+[.small]#source: https://fr.wikipedia.org/wiki/Les_Collines_noires[Lucky Luke: Les Collines Noires]#
+
+[NOTE.speaker]
+--
+* Fragilité du "réseau"
+* Meilleure Confidentialité ?
+--
+
+== Meilleure Solution : Le Courrier
+
+[%step]
+* Plus grande quantité d'information
+* Meilleure confidentialité
 
 == Un peu d'histoire...
 
 [%step]
 * Télégraphe Optique
-** "Super Sémpahore"
+** "Super Sémaphore"
 * Télégraphe Electrique
-** 26 Lettres: 26 fils ?
+** *26* Lettres: *26* fils ?
 
 == Problématiques
 

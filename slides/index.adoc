@@ -39,6 +39,7 @@ image::containous-logo.png["Containous Logo"]
 :leveloffset: +1
 
 include::./includes/intro-linux-cli.adoc[]
+include::./includes/intro-reseau.adoc[]
 
 :leveloffset: -1
 
