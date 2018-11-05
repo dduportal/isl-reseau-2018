@@ -106,7 +106,15 @@ Exemples :
 * Déplacer un fichier ou répertoire: `mv`
 * Supprimer un fichier ou répertoire: `rm`
 
-== Fichiers spéciaux : liens symboliques et durs avec ln
+== Exercice avec le système de fichier
+
+++++
+<script src="//katacoda.com/embed.js"></script>
+<div id="katacoda-scenario-2"
+    data-katacoda-id="dduportal/katacodacomdduportalisl-reseau-2018-linux-cli-2"
+    data-katacoda-color="004d7f"
+    style="height: 600px; padding-top: 20px;"></div>
+++++
 
 == Utilisateurs
 
