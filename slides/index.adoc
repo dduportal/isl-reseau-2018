@@ -6,6 +6,14 @@ image::qrcode.svg["QRCode to this presentation",height=150]
 [.small]
 Présentation disponible à l'URL link:{presentationUrl}[]
 
+== Comment utiliser cette présentation ?
+
+* Pour naviguer, utilisez les flèches en bas à droite (ou celles de votre clavier)
+** Gauche/Droite: changer de chapitre
+** Haut/Bas: naviguer dans un chapitre
+* Pour avoir une vue globale : utiliser la touche "kbd:[o]" (pour "*Overview*")
+* Pour voir les notes de l'auteur : utilisez la touche "kbd:[s]" (pour "*Speaker* notes")
+
 // //// Speaker Slide and Company slide
 == Whoami
 
@@ -20,7 +28,7 @@ link:https://containo.us/[Containous] et Freelancer
 
 image::damien.jpg[height=200]
 
-== Containous
+=== Containous
 
 * link:https://containo.us[]
 * We Believe in Open Source

@@ -5,33 +5,78 @@
 
 image::tux.png[height=500]
 
+== Conventions
+
+* Le charactère "dollar" `$` en début de ligne indique une invitation de commande
+** Son absence indique le résultat de la commande executée dans l'invitation
+
 == Commande
 
-« verbe »
+* C'est le « verbe » expirmant l'intention de la commande
 
+* Example: `ls` pour "Lister" le contenu d'un répertoire :
+
+[source,bash]
+----
+$ ls
+Dockerfile         README.adoc        dist               gulp               scripts
+Makefile           assets             docker-compose.yml package.json       slides
+----
 
 == Arguments
 
-Compléments d'Objets
+* C'est le "compléments d'objet" permettant de désigner la cible de l'intention
+
+* Example: "Lister" le contenu du répertoire `/usr` :
+
+[source,bash]
+----
+$ ls /usr
+bin        include    lib        libexec    local      sbin       share      standalone
+----
 
 == Options
 
-«  adverbes » pour nuance qui peut avoir des arguments lui même
+* Ce sont des «  adverbes » pour nuancer l'intention
 
-== Examples
+* Example: Lister le contenu du répertoire courant, en affichant 1 élément par ligne avec les détails:
 
-ls
-
+[source,bash]
+----
+$ ls -l
+total 40
+-rw-r--r--@ 1 dadou  staff   564 Oct 15 15:16 Dockerfile
+-rw-r--r--@ 1 dadou  staff  1320 Oct 15 15:12 Makefile
+-rw-r--r--@ 1 dadou  staff  1567 Oct 15 15:12 README.adoc
+drwxr-xr-x@ 4 dadou  staff   128 Oct 15 15:05 assets
+drwxr-xr-x  8 dadou  staff   256 Nov  5 13:25 dist
+-rw-r--r--@ 1 dadou  staff   661 Oct 15 15:12 docker-compose.yml
+drwxr-xr-x@ 4 dadou  staff   128 Oct 15 15:05 gulp
+-rw-r--r--@ 1 dadou  staff   778 Oct 15 15:11 package.json
+drwxr-xr-x@ 3 dadou  staff    96 Oct 15 15:05 scripts
+drwxr-xr-x@ 6 dadou  staff   192 Nov  4 12:00 slides
+----
 
 == Kit de survie
 
-Valider avec entrée
+* Supercommandes: kbd:[CTRL] + * :
+** kbd:[Ctrl+C]: Interrompre la commande en cours
+** kbd:[Ctrl+A] / kbd:[Ctrl+E]: Naviguer au début / à la fin de la ligne en cours
+** kbd:[Ctrl+D]: Equivalent des commandes `exit` ou `logout`
+** kbd:[Ctrl+R]: Rechercher dans l'historique des commandes
 
-Supercommandes: CTRL-* (C, E, A, R, D)
+* `man CMD` pour le "manuel" d'une commande. Example: `man ls`.
+** Si les "manuels" ne sont pas installés : Google !
 
-== Exercice
+== Exercice avec ls
 
-Ouvrir une console
+++++
+<script src="//katacoda.com/embed.js"></script>
+<div id="katacoda-scenario-1"
+    data-katacoda-id="dduportal/katacodacomdduportalisl-reseau-2018-linux-cli-1"
+    data-katacoda-color="004d7f"
+    style="height: 600px; padding-top: 20px;"></div>
+++++
 
 == Système de fichier
 
@@ -43,11 +88,23 @@ Arbre :
 
 == Parcours du système de fichier
 
-* `/` comme separateur
+"/" comme racine, et aussi "/" comme separateur
 
-== Exercices système de fichier
+Exemples :
 
-avec ls, cd, touch, mkdir, mv, cp et rm
+* `/` : "racine" du disque
+* `/usr` : Dossier `usr` à la racine du disque
+* `/home/scrapbook` : Sous-dossier `scrapbook` dans le dossier `home` à la racine
+
+== Quelques commandes utiles
+
+* Changer de répertoire courant: `cd`
+* Afficher le répertoire courant: `pwd`
+* Créer un fichier: `touch`
+* Créer un répertoire: `mkdir`
+* Copier un fichier ou répertoire: `cp`
+* Déplacer un fichier ou répertoire: `mv`
+* Supprimer un fichier ou répertoire: `rm`
 
 == Fichiers spéciaux : liens symboliques et durs avec ln
 
