@@ -1,0 +1,10 @@
+
+= TCP / IP
+
+[{invert}]
+== Simplifions !
+
+image::osi-tcp.jpg[height=500]
+
+[.small]
+Source: http://albertoalvarez95.wixsite.com/prblog/single-post/2016/02/25/Les-diff%C3%A9rences-entre-le-mod%C3%A8le-OSI-et-TCPIP[]

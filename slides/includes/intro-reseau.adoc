@@ -112,17 +112,6 @@ image::lucky-luke-fumee.jpg[height=500]
 * Quel propriétées ?
 * Quand commencer, et finir ?
 
-== Descartes ?
-
-image:hal-replace-light-bulb.gif[height=500, width=800]
-
-== Descartes
-
-* Découper un gros problème en sous-problèmes
-* "Esprit Cartésien"
-* _Faire une seule chose, mais bien la faire_
-
-
 // Notes et drafts
 // http://www.bortzmeyer.org/cryptage-n-existe-pas.html
 // http://www.ryfe.fr/2011/08/les-mots-crypter-et-cryptage-n%E2%80%99existent-pas/

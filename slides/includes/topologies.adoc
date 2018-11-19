@@ -1,0 +1,17 @@
+
+= Topologies
+
+== Type de Topologies
+
+* Topologies Physiques : Quoi ?
+* Topologies Logiques : Comment ?
+
+== Réseau en Bus
+
+== Réseau en Etoile
+
+== Réseau en Anneau
+
+== Réseau en Maillage
+
+== Topologie Hybride
