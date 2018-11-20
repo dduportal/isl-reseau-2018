@@ -14,11 +14,7 @@ build: clean
 		--exit-code-from build \
 	build
 
-verify:
-	@echo OK
-
-
-#verify-links verify-w3c
+verify: verify-links verify-w3c
 
 verify-links:
 	@docker run --rm \

@@ -72,7 +72,7 @@ ____
 ** 125 = 100 + 20 + 5 = ( 1 x 10^2^ ) + ( 2 x 10^1^ ) + ( 5 x 10^0^ )
 
 * Binaire :
-** 111 = 100 + 10 + 1 = ( 1 x 10^2^ ) + ( 1 x 10^1^ ) + ( 1 x 10^0^ )
+** 111 = 100 + 10 + 1 = ( 1 x 2^2^ ) + ( 1 x 2^1^ ) + ( 1 x 2^0^ )
 
 == Octet / Bits / Digit ?
 
@@ -97,3 +97,8 @@ ____
 * Pratique en informatique: codé sur 4 bits
 
 == Exercices
+
+* Couleurs en CSS : Combien de couleurs possibles,
+** avec le format `#aaaaaa` (6 caractères hexadécimaux) ?
+** avec le formt RVB(255,255,255) (3 octets) ?
+** Conclusion ?
