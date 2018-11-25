@@ -1,6 +1,20 @@
 
 = Modèle "Internet Protocol" (TCP-IP)
 
+== Problèmatiques du modèle OSI
+
+* Modèle poussé par des industriels
+** Intérêts
+** Pérennité
+
+* Très complet, mais très complexe
+
+== Bienvenue au modèle "Internet Protocol"
+
+* Issu de la recherche universitaire, puis militaire
+** Réf. DARPA / ARPANET
+
+
 [{invert}]
 == Simplifions !
 
