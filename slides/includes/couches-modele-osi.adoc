@@ -29,10 +29,11 @@ image::osi-easy.jpg[height=600]
 image::osi-model.png[height=700]
 
 [{invert}]
-== OSI: transmission de données
+== OSI: Commutation de paquets
+
+But: Transfert d'information dans des paquets
 
 image::osi-data.gif[]
-// osi-model-communication.png
 
 [{invert}]
 == Packet Data Unit (PDU)

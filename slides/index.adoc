@@ -1,8 +1,14 @@
-
+[%notitle]
 = Introduction au Réseau - Institut Saint Laurent - 2018
 include::./includes/attributes.adoc[]
 
+[{invert}]
+== Introduction au Réseau
+[.title]
+Institut Saint Laurent - 2018
+
 image::qrcode.svg["QRCode to this presentation",height=150]
+
 [.small]
 Présentation disponible à l'URL link:{presentationUrl}[]
 
@@ -15,6 +21,7 @@ Présentation disponible à l'URL link:{presentationUrl}[]
 * Pour voir les notes de l'auteur : utilisez la touche "kbd:[s]" (pour "*Speaker* notes")
 
 // //// Speaker Slide and Company slide
+[{invert}]
 == Whoami
 
 * Damien DUPORTAL:
@@ -22,7 +29,7 @@ Présentation disponible à l'URL link:{presentationUrl}[]
 link:https://containo.us/[Containous] et Freelancer
 ** Former Training Engineer @ CloudBees
 
-* icon:envelope[] mailto:damien.duportal@gmail.com[damien.duportal@gmail.com]
+* mailto:damien.duportal@gmail.com[icon:envelope[] damien.duportal@gmail.com]
 * link:https://twitter.com/DamienDuportal[icon:twitter[] @DamienDuportal]
 * link:https://github.com/dduportal[icon:github[] dduportal]
 

@@ -7,18 +7,52 @@
 ** Intérêts
 ** Pérennité
 
-* Très complet, mais très complexe
+* Très complet, mais trop complexe
 
 == Bienvenue au modèle "Internet Protocol"
 
-* Issu de la recherche universitaire, puis militaire
-** Réf. DARPA / ARPANET
+* Inventé par Vinton G. Cerf et Bob Kahn
 
+* link:https://tools.ietf.org/html/rfc1122:[RFC 1122]
+
+* Issu de la recherche universitaire, puis militaire
+
+* Utilisé sur ARPANet en 1983
 
 [{invert}]
-== Simplifions !
+== Simplifions OSI !
 
 image::osi-tcp.jpg[height=500]
 
 [.small]
 Source: http://albertoalvarez95.wixsite.com/prblog/single-post/2016/02/25/Les-diff%C3%A9rences-entre-le-mod%C3%A8le-OSI-et-TCPIP[]
+
+== TCP/IP : les 4 couches
+
+* Couche Applicative:
+** Communications de haut niveau
+
+* Couche Transport:
+** Garantie des niveaux de service
+
+* Couche "Internet Protocol":
+** Gestion des adresses
+
+* Couche "Liaison de données":
+** Gestion de la voie physique
+
+[{invert}]
+== TCP/IP : Communication point à point
+
+image::TCPIP_5_layer_overview.jpg[]
+//image::tcp-ip-communication.png[]
+
+[{invert}]
+== TCP/IP : Commutation de paquet
+
+image::tcp-ip-layer-transmit-data.jpg[]
+
+// [{invert}]
+// == TCP/IP : Exemple simple
+//
+// image::tcp-ip-model-data-flow.png[width=800]
