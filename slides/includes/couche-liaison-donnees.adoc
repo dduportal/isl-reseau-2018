@@ -3,41 +3,77 @@
 
 Modèle "Internet Protocole"
 
+[{invert}]
 == Où sommes nous ?
 
-//TODO: Diagramme OSI + IP, avec focus sur la couche physique
+image::tcp-ip-modele-liaison-donnees.png[]
 
 == Buts de la couche "Liaison de Données"
 
-// TODO: liste à puce de la définition
-// http://www.omnisecu.com/tcpip/tcpip-model.php
-// https://en.wikipedia.org/wiki/Internet_protocol_suite
+* Transmission de la donnée via la couche physique
+
+* Par abus de language: on intègre la couche physique ici
+** Donc liaison physique, carte associée, et pilotes logiciels
 
 == Exemples
 
-// TODO: lister élec/optique/radio
-// TODO: Ethernet, Wifi, Bluetooth, NFC, Fibre optique, etc.
+* Ethernet
+* Wifi
+* Bluetooth
+* Cable Coaxial
+* Fibre Optique
+* NFC
 
-== Topologie Physiques
+== Topologie
 
-// TODO: définition
+[quote]
+____
+Branche des mathématiques qui étudie la géométrie de situation, les propriétés de l'espace.
+____
 
 == Type de Topologies
 
 * Topologies Physiques : Palpables
 * Topologies Logiques : Virtuelles
 
-== Exemples de Topologies
+== Topologie Linéaire
+
+image::LineNetwork.png[]
+
+[.small]
+link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Lin%C3%A9aire[Source]
 
 == Topologie en Etoile
 
+image::StarNetwork.png[]
+
+[.small]
+link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/%C3%89toile[Source]
+
 == Topologie en Bus
+
+image::BusNetwork.png[]
+
+[.small]
+link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Bus[Source]
 
 == Topologie en Anneau
 
+image::RingNetwork.png[]
+
+[.small]
+link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Anneau[Source]
+
 == Topologie en Maillage
 
+image::[]
+
 == Topologie Hybrides
+
+image::[]
+
+[.small]
+link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Lin%C3%A9aire[Source]
 
 == Ethernet
 

@@ -3,14 +3,16 @@
 
 Modèle "Internet Protocole"
 
+[{invert}]
 == Où sommes nous ?
 
-//TODO: Diagramme OSI + IP, avec focus sur la couche Internet
+image::tcp-ip-modele-internet-protocol.png[]
 
 == Buts de la couche "Internet"
 
-// TODO: liste à puce de la définition
-// http://www.omnisecu.com/tcpip/tcpip-model.php
+* Gestion des adresses
+
+* Gestion du routage
 
 == Adresse IP
 

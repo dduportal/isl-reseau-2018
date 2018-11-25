@@ -3,14 +3,18 @@
 
 Modèle "Internet Protocole"
 
+[{invert}]
 == Où sommes nous ?
 
-//TODO: Diagramme OSI + IP, avec focus sur la couche Application
+image::tcp-ip-modele-application.png[]
 
 == Buts de la couche "Application"
 
-// TODO: liste à puce de la définition
-// http://www.omnisecu.com/tcpip/tcpip-model.php
+* C'est ici que se passe votre travail
+
+* Communications de haut niveau entre des processus distants
+
+* Plein de protocoles connus se trouvent ici: HTTP, SSH, FTP, P2P, etc.
 
 == DNS
 

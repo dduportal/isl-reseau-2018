@@ -3,14 +3,18 @@
 
 Modèle "Internet Protocole"
 
+[{invert}]
 == Où sommes nous ?
 
-//TODO: Diagramme OSI + IP, avec focus sur la couche Transport
+image::tcp-ip-modele-transport.png[]
 
 == Buts de la couche "Transport"
 
-// TODO: liste à puce de la définition
-// http://www.omnisecu.com/tcpip/tcpip-model.php
+* Garantie des niveaux de service de la communication
+
+* Gestion du niveau d'intégrité des données transmises
+
+* Gestion des performances et des états
 
 == TCP
 
