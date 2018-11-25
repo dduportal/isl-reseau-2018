@@ -43,19 +43,13 @@ image::LineNetwork.png[]
 [.small]
 link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Lin%C3%A9aire[Source]
 
-== Topologie en Etoile
+== Topologie Linéaire
 
-image::StarNetwork.png[]
-
-[.small]
-link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/%C3%89toile[Source]
-
-== Topologie en Bus
-
-image::BusNetwork.png[]
-
-[.small]
-link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Bus[Source]
+* La plus simple
+* Très fragile
+* Temps de parcours dépendant de la distance
+* Ajout facile
+* Supression avec coupure
 
 == Topologie en Anneau
 
@@ -64,20 +58,97 @@ image::RingNetwork.png[]
 [.small]
 link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Anneau[Source]
 
-== Topologie en Maillage
+== Topologie en Anneau
 
-image::[]
+* Modèle du "paquet de chips autour du feu de camp"
 
-== Topologie Hybrides
+* Moins fragile: Duplication des chemins
 
-image::[]
+* Temps de parcours dépendant de la distance
+
+* Ajout moyennement couteux
+
+* Supression moyennement couteuse
+
+== Topologie en Etoile
+
+image::StarNetwork.png[]
 
 [.small]
-link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Lin%C3%A9aire[Source]
+link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/%C3%89toile[Source]
+
+== Topologie en Etoile
+
+* Modèle du "chef scout au feu de camp".
+
+* Fragilité limité à la coupure, pas d'impact sur le reste.
+** Mais Centralisation
+
+* Temps de parcours constant
+
+* Ajout facile
+
+* Supression facile
+
+== Topologie en Bus
+
+image::BusNetwork.png[]
+
+[.small]
+link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Bus[Source]
+
+== Topologie en Bus
+
+* Variation de l'étoile, mais sans élément central
+
+* Temps de parcours constant
+
+* Ajout et supression facile
+
+== Topologie en Arbre
+
+image::NetworkTopology-Tree.png[]
+
+[.small]
+link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Arbre[Source]
+
+== Topologie en Arbre
+
+* Interconnexion de topologie en étoiles entre elles
+
+* Fragile
+
+* Parcours constant et facile
+
+== Topologie en Maillage
+
+image::FullMeshNetwork.png[]
+
+[.small]
+link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Maill%C3%A9[Source]
+
+== Topologie en Maillage
+
+* Temps de parcours constant
+
+* Ajout et supression complexe
+
+* Très solide
+
+== Topologie Hybride
+
+* **Internet**: "Inter-network" : Interconnexion de réseaux avec différents topologies
 
 == Ethernet
 
 Une implémentation de la couche "Liaison de Données"
+
+== "Ether"
+
+[quote, Scientifiques du 18^ème^ siècle]
+____
+Milieu hypothétique des substances subtiles distinctes de la matière et permettant de fournir ou transmettre des effets entre les corps censé baigner l'Univers.
+____
 
 == Ethernet : RJ45
 
