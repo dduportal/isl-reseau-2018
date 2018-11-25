@@ -1,5 +1,5 @@
 
-= TCP / IP
+= Modèle "Internet Protocol" (TCP-IP)
 
 [{invert}]
 == Simplifions !

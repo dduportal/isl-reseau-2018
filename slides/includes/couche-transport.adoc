@@ -1,0 +1,31 @@
+
+= Couche "Transport"
+
+Modèle "Internet Protocole"
+
+== Où sommes nous ?
+
+//TODO: Diagramme OSI + IP, avec focus sur la couche Transport
+
+== Buts de la couche "Transport"
+
+// TODO: liste à puce de la définition
+// http://www.omnisecu.com/tcpip/tcpip-model.php
+
+== TCP
+
+== UDP
+
+== Ports
+
+// TODO: multiplexer
+
+== Translation de port réseau
+
+== Rappel Router
+
+// TODO: Réintégrer concept translation
+
+== Exercice avec nmap
+
+// TODO: Découverte des ports ouverts sur un hôte du réseau

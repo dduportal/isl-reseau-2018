@@ -1,0 +1,35 @@
+
+= Couche "Application"
+
+Modèle "Internet Protocole"
+
+== Où sommes nous ?
+
+//TODO: Diagramme OSI + IP, avec focus sur la couche Application
+
+== Buts de la couche "Application"
+
+// TODO: liste à puce de la définition
+// http://www.omnisecu.com/tcpip/tcpip-model.php
+
+== DNS
+
+// TODO: UDP
+
+== Exercices avec DNS
+
+// TODO: dig pour résoudre des noms de domaine
+
+== SSH
+
+// TODO: TCP
+
+== Exercices avec SSH
+
+// TODO: Connexion à un serveur distant
+
+== HTTP
+
+// TODO: TCP / états
+// TODO: verbes
+// TODO: Headers

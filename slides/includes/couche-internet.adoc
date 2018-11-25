@@ -1,0 +1,77 @@
+
+= Couche "Internet"
+
+Modèle "Internet Protocole"
+
+== Où sommes nous ?
+
+//TODO: Diagramme OSI + IP, avec focus sur la couche Internet
+
+== Buts de la couche "Internet"
+
+// TODO: liste à puce de la définition
+// http://www.omnisecu.com/tcpip/tcpip-model.php
+
+== Adresse IP
+
+== Masques
+
+// TODO: Un peu de binaire
+
+== Classes d'adresses IP
+
+== Broadcast / Unicast
+
+== Exercices de calculs de masques
+
+== Lien IP / MAC
+
+// TODO: Table ARP
+
+== Exercices avec ARP
+
+// https://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/
+
+== Rappel Modèle Couches
+
+// TODO: Exemples de liens avec Hub/Switch/CPL
+
+== Rappel Topologies
+
+// TODO: Topologie Virtuelle
+
+== Sous réseaux
+
+// TODO: Rappel LAN/WAN
+
+== Passerelle
+
+// TODO: SI classes IPs, alors comment gérer le problème globalement?
+
+== Routeur
+
+== Routage
+
+== Table de routage
+
+== Exercice avec la table de routage
+
+// https://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/
+
+== Translation d'adresse réseau
+
+// TODO: NAT
+
+== Protocole ICMP
+
+// TODO: https://www.webopedia.com/TERM/I/ICMP.html
+
+== Ping: un outil se basant sur ICMP
+
+== Exercie avec Ping
+
+// https://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/
+
+== Exercice avec nmap
+
+// TODO: Découverte des IPs sur le réseau

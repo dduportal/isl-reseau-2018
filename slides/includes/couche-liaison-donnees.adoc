@@ -1,0 +1,98 @@
+
+= Couche "Liaison de Données"
+
+Modèle "Internet Protocole"
+
+== Où sommes nous ?
+
+//TODO: Diagramme OSI + IP, avec focus sur la couche physique
+
+== Buts de la couche "Liaison de Données"
+
+// TODO: liste à puce de la définition
+// http://www.omnisecu.com/tcpip/tcpip-model.php
+// https://en.wikipedia.org/wiki/Internet_protocol_suite
+
+== Exemples
+
+// TODO: lister élec/optique/radio
+// TODO: Ethernet, Wifi, Bluetooth, NFC, Fibre optique, etc.
+
+== Topologie Physiques
+
+// TODO: définition
+
+== Type de Topologies
+
+* Topologies Physiques : Palpables
+* Topologies Logiques : Virtuelles
+
+== Exemples de Topologies
+
+== Topologie en Etoile
+
+== Topologie en Bus
+
+== Topologie en Anneau
+
+== Topologie en Maillage
+
+== Topologie Hybrides
+
+== Ethernet
+
+Une implémentation de la couche "Liaison de Données"
+
+== Ethernet : RJ45
+
+// TODO: images câble RJ45 / carte réseau
+// https://www.commentcamarche.com/contents/304-creation-d-un-cable-rj45-croise
+
+== Ethernet : câblage
+
+// TODO: image cables
+// https://fr.wikipedia.org/wiki/RJ45#C%C3%A2blage
+
+== Ethernet : fonctionnement de base
+
+// TODO: exemple pair à pair avec cable croisé
+
+== Ethernet :Comment connecter plusieurs équipements ?
+
+// TODO: Problem statement
+
+== Ethernet : Concentrateur
+
+// TODO: expliquer "multprise" + traduction Hub
+
+== Ethernet + Concentrateur : Protocole "Feu de Camp"
+
+// TODO: expliquer le bordel avec application au niveau électrique
+// TODO: pointer sur topologie en étoile + expliquer partage bande passante
+
+== Ethernet : Commutateur
+
+// TODO: expliquer concept du cadencement électrique + traduction Switch
+// TODO: Table de commutation (insérer diagrammes d'expliquation from https://askleo.com/whats_the_difference_between_a_hub_a_switch_and_a_router/)
+
+== Ethernet + Commutateur : Protocole "Arbitre"
+
+// TODO: Mentionner topologie bus
+
+== Ethernet : Câbles droits pour Commutateur
+
+// TODO: Simplification
+
+== Ethernet : Résumé sur les câbles
+
+== Réseau Locaux / Globaux
+
+// TODO: LAN/WAN
+
+== Interface Réseau
+
+== Adresse MAC
+
+== Exercices Adresses MAC
+
+// https://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/

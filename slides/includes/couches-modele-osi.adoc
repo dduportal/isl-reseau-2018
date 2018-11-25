@@ -1,5 +1,7 @@
 
-= Il en tient un couche ce modèle !
+= Modèle OSI
+
+Il en tient un couche ce modèle !
 
 == Descartes ?
 
