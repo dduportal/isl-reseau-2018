@@ -184,43 +184,129 @@ image::ethernet-wiring-crossover.png[width=900]
 
 **Problème :** Comment faire dialoguer 3+ ordinateurs via Ethernet ?
 
+[{invert}]
 == Ethernet : Concentrateur
 
 **Solution :** Concentrateur ("Hub") Ethernet.
+
+image::hub.png[]
 
 [NOTE.speaker]
 --
 "Multiprise Ethernet"
 --
 
+[{invert}]
+== Ethernet : Chaînage de concentrateurs
+
+image::hub-interco.png[height=700]
+
+[{invert}]
+== Ethernet: Cinématique avec un concentrateur 1/2
+
+image::hub-incoming2.png[width=900]
+
+[.small]
+link:https://askleo.com/whats_the_difference_between_a_hub_a_switch_and_a_router/[Source]
+
+[{invert}]
+== Ethernet: Cinématique avec un concentrateur 2/2
+
+image::hub-response.png[width=900]
+
+[.small]
+link:https://askleo.com/whats_the_difference_between_a_hub_a_switch_and_a_router/[Source]
+
 == Ethernet + Concentrateur : Protocole "Feu de Camp"
 
-// TODO: expliquer le bordel avec application au niveau électrique
-// TODO: pointer sur topologie en étoile + expliquer partage bande passante
+Imaginez une conversation autour d'un feu de camp à 10:
+
+* Concept de "collision" : On attends avant de réessayer
+
+* Simple mais peu performant. En plus on a des adresses...
+
+== Ethernet : Il faut un arbitre
+
+image::sifflet.png[width=200]
+
+* Passage à une topologie "bus"
+** On était en topologie "étoile" / "arbre"
 
 == Ethernet : Commutateur
+
+image::switch-ethernet.png[width=900]
 
 // TODO: expliquer concept du cadencement électrique + traduction Switch
 // TODO: Table de commutation (insérer diagrammes d'expliquation from https://askleo.com/whats_the_difference_between_a_hub_a_switch_and_a_router/)
 
-== Ethernet + Commutateur : Protocole "Arbitre"
+[{invert}]
+== Ethernet + Commutateur : Chef d'orchestre
 
-// TODO: Mentionner topologie bus
+image::chef-orchestre.jpg[width=900]
+
+[{invert}]
+== Ethernet: Cinématique avec un commutateur 1/2
+
+image::switch-incoming.png[width=900]
+
+[.small]
+link:https://askleo.com/whats_the_difference_between_a_hub_a_switch_and_a_router/[Source]
+
+[{invert}]
+== Ethernet: Cinématique avec un commutateur 2/2
+
+image::switch-response.png[width=900]
+
+[.small]
+link:https://askleo.com/whats_the_difference_between_a_hub_a_switch_and_a_router/[Source]
 
 == Ethernet : Câbles droits pour Commutateur
 
-// TODO: Simplification
+image::ethernet-wiring-straight.png[width=900]
 
-== Ethernet : Résumé sur les câbles
+* Toutes les cartes Ethernet savent croiser/décroiser en 2018
 
-== Réseau Locaux / Globaux
 
-// TODO: LAN/WAN
+== Ethernet : Comment localiser l'interlocuteur ?
 
-== Interface Réseau
+**Solution :** Adressage
 
 == Adresse MAC
 
+**M.A.C.** : "Media Access Control" (rien à voir avec une pomme)
+
+* Adresse dites "physique" car déclarée dans le matériel
+** Peut être surchargée (Confidentialité sur Wifi publics...)
+
+* Structure : 
+** Stockée sur 6 octets
+** Couramment exprimée en hexadécimal
+
+[{invert}]
 == Exercices Adresses MAC
 
+* Pourquoi l'hexadécimal?
+
+* Localiser l'adresse MAC de votre machine
+** Problème: Plusieurs interfaces réseau ?
+
+* Localiser l'adresse MAC de l'ethernet sur les Raspberry Pis
+
+[NOTE.speaker]
+--
+
+* Windows : `ipconfig /all`
+* Linux : `ip addr show`
+* macOS: `ifconfig`
+
+--
+
 // https://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/
+
+== Réseau Locaux / Globaux
+
+* Réseau "local" ("LAN - Local Area Network") :
+** On parle d'un "segment"
+
+* Réseau "global" ("WAN - Wide Area Network) :
+** Interconnexion de segments
