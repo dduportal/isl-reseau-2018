@@ -44,15 +44,9 @@ Source: http://albertoalvarez95.wixsite.com/prblog/single-post/2016/02/25/Les-di
 [{invert}]
 == TCP/IP : Communication point à point
 
-image::TCPIP_5_layer_overview.jpg[]
-//image::tcp-ip-communication.png[]
+image::tcp-ip-layers-overview.jpg[]
 
 [{invert}]
 == TCP/IP : Commutation de paquet
 
 image::tcp-ip-layer-transmit-data.jpg[]
-
-// [{invert}]
-// == TCP/IP : Exemple simple
-//
-// image::tcp-ip-model-data-flow.png[width=800]

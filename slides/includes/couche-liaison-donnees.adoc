@@ -10,10 +10,10 @@ image::tcp-ip-modele-liaison-donnees.png[]
 
 == Buts de la couche "Liaison de Données"
 
-* Transmission de la donnée via la couche physique
+* Contrôler la transmission de la donnée via la couche physique
 
 * Par abus de language: on intègre la couche physique ici
-** Donc liaison physique, carte associée, et pilotes logiciels
+** Donc liaison physique + carte associée + pilotes logiciels
 
 == Exemples
 
@@ -38,7 +38,7 @@ ____
 
 == Topologie Linéaire
 
-image::LineNetwork.png[]
+image::topology-line-network.png[]
 
 [.small]
 link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Lin%C3%A9aire[Source]
@@ -49,11 +49,11 @@ link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Lin%C3%A9aire[Sour
 * Très fragile
 * Temps de parcours dépendant de la distance
 * Ajout facile
-* Supression avec coupure
+* suppression avec coupure
 
 == Topologie en Anneau
 
-image::RingNetwork.png[]
+image::topology-ring-network.png[]
 
 [.small]
 link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Anneau[Source]
@@ -68,11 +68,11 @@ link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Anneau[Source]
 
 * Ajout moyennement couteux
 
-* Supression moyennement couteuse
+* suppression moyennement couteuse
 
 == Topologie en Etoile
 
-image::StarNetwork.png[]
+image::topology-star-network.png[]
 
 [.small]
 link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/%C3%89toile[Source]
@@ -88,11 +88,11 @@ link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/%C3%89toile[Source
 
 * Ajout facile
 
-* Supression facile
+* suppression facile
 
 == Topologie en Bus
 
-image::BusNetwork.png[]
+image::topology-bus-network.png[]
 
 [.small]
 link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Bus[Source]
@@ -103,11 +103,11 @@ link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Bus[Source]
 
 * Temps de parcours constant
 
-* Ajout et supression facile
+* Ajout et suppression facile
 
 == Topologie en Arbre
 
-image::NetworkTopology-Tree.png[]
+image::topology-tree-network.png[]
 
 [.small]
 link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Arbre[Source]
@@ -118,11 +118,13 @@ link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Arbre[Source]
 
 * Fragile
 
+* Ajout facile, suppression moyennemenet complexe
+
 * Parcours constant et facile
 
 == Topologie en Maillage
 
-image::FullMeshNetwork.png[]
+image::topology-full-mesh-network.png[]
 
 [.small]
 link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Maill%C3%A9[Source]
@@ -131,7 +133,7 @@ link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Maill%C3%A9[Source
 
 * Temps de parcours constant
 
-* Ajout et supression complexe
+* Ajout et suppression complexes
 
 * Très solide
 
@@ -141,36 +143,55 @@ link:https://fr.wikiversity.org/wiki/Topologie_de_r%C3%A9seau/Maill%C3%A9[Source
 
 == Ethernet
 
-Une implémentation de la couche "Liaison de Données"
+Un exemple d'implémentation de
+
+la couche "Liaison de Données + Physique"
 
 == "Ether"
 
-[quote, Scientifiques du 18^ème^ siècle]
+[quote, "Scientifique Anonyme, 1789"]
 ____
 Milieu hypothétique des substances subtiles distinctes de la matière et permettant de fournir ou transmettre des effets entre les corps censé baigner l'Univers.
 ____
 
+== Ethernet : Kezako ?
+
+Ethernet est :
+
+* Une mécanisme de connexion physique, à transmission électrique
+* Un protocole de réseau local à "commutation de paquets"
+* Une norme internationale :
+link:https://www.iso.org/standard/72048.html[ISO/IEC 8802-3]
+
+== Ethernet : Connexion physique à transmission électrique
+
+[{invert}]
 == Ethernet : RJ45
 
-// TODO: images câble RJ45 / carte réseau
-// https://www.commentcamarche.com/contents/304-creation-d-un-cable-rj45-croise
+image::rj45-males.jpg[float=left,width=600]
+
+image::Rj-45_on_motherboard.jpg[float=right,width=500]
 
 == Ethernet : câblage
 
-// TODO: image cables
-// https://fr.wikipedia.org/wiki/RJ45#C%C3%A2blage
+image::rj45-wiring.png[height=600]
 
 == Ethernet : fonctionnement de base
 
-// TODO: exemple pair à pair avec cable croisé
+image::ethernet-wiring-crossover.png[width=900]
 
-== Ethernet :Comment connecter plusieurs équipements ?
+== Ethernet : Comment connecter plusieurs équipements ?
 
-// TODO: Problem statement
+**Problème :** Comment faire dialoguer 3+ ordinateurs via Ethernet ?
 
 == Ethernet : Concentrateur
 
-// TODO: expliquer "multprise" + traduction Hub
+**Solution :** Concentrateur ("Hub") Ethernet.
+
+[NOTE.speaker]
+--
+"Multiprise Ethernet"
+--
 
 == Ethernet + Concentrateur : Protocole "Feu de Camp"
 
