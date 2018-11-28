@@ -16,9 +16,28 @@ image::tcp-ip-modele-internet-protocol.png[]
 
 == Adresse IP
 
+* Sur 4 octets
+
+== Adresses IP réservées
+
+== Lien IP / MAC
+
+// TODO: Table ARP
+
 == Masques
 
 // TODO: Un peu de binaire
+
+[NOTE.speaker]
+--
+192.168.1.2 & 255.255.255.0
+
+--
+
+== Lien IP / MAC
+
+// TODO: Table ARP
+--
 
 == Classes d'adresses IP
 
@@ -26,9 +45,7 @@ image::tcp-ip-modele-internet-protocol.png[]
 
 == Exercices de calculs de masques
 
-== Lien IP / MAC
 
-// TODO: Table ARP
 
 == Exercices avec ARP
 
