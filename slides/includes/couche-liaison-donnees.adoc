@@ -1,7 +1,7 @@
 
 = Couche "Liaison de Données"
 
-Modèle "Internet Protocole"
+Modèle "Internet Protocol"
 
 [{invert}]
 == Où sommes nous ?
@@ -229,8 +229,8 @@ Imaginez une conversation autour d'un feu de camp à 10:
 
 image::sifflet.png[width=200]
 
-* Passage à une topologie "bus"
-** On était en topologie "étoile" / "arbre"
+* Passage à une topologie "étoile"
+** On était en topologie "bus"
 
 == Ethernet : Commutateur
 
@@ -278,7 +278,7 @@ image::ethernet-wiring-straight.png[width=900]
 * Adresse dites "physique" car déclarée dans le matériel
 ** Peut être surchargée (Confidentialité sur Wifi publics...)
 
-* Structure : 
+* Structure :
 ** Stockée sur 6 octets
 ** Couramment exprimée en hexadécimal
 

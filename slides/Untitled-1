@@ -1,0 +1,28 @@
+- boucles
+- fix inversion topologies
+- ping
+- traceroute
+
+- Interco de réseaux
+- IP sur 32 bits (4 octets). 0.0.0.0 -> 255.255.255.0
+- Codage de 2 informations: Adresse de l'hôte, et celle du réseau. => Masque sous réseau pour décoder.
+  - Exercice 192.168.1.4 avec 255.255.255.0
+- Continuité des bits du masque
+  - Execice: trouver toutes les valeurs possibles par octet
+- Notation CIDR avec le slash (nombre de bits à 1)
+- Plage d'adresse: Pour un réseau donné. IP et masque, donner début et fin.
+  - Exercice 192.168.1.4 avec 255.255.255.0, puis 255.255.240.0, puis 255.255.0.0
+- Adresses IP réservées / spéciales
+  - Réseau (première)
+  - Broadcast (dernière)
+  - 127.0.0.1
+  - 0.0.0.0
+  - Exercice: Combien d'hôtes pour 10.0.4.0/24 ?
+  - Exercice: 192.168.0.15-255.255.255.240: reseau, broadcast ou un hôte ?
+- Interco de réseaux
+  - Execice avec traceroute
+- RFC 1918: 10.0.0.0/255.0.0.0, 172.16.0.0/255.240.0.0, 192.168.0.0/255.255.0.0 (Ip privées)
+- Routage: IP dest, IP exp.
+  - Si IP dans le même réseau, alors hop couche de dessous
+  - Si non: adresse reseau, envoie au routeur/passerelle
+- Passerelle / Table de Routage

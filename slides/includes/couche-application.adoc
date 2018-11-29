@@ -1,7 +1,7 @@
 
 = Couche "Application"
 
-Modèle "Internet Protocole"
+Modèle "Internet Protocol"
 
 [{invert}]
 == Où sommes nous ?

@@ -1,18 +1,18 @@
 
-= Couche "Internet"
+= Couche "Réseau"
 
-Modèle "Internet Protocole"
+Modèle "Internet Protocol"
 
 [{invert}]
 == Où sommes nous ?
 
 image::tcp-ip-modele-internet-protocol.png[]
 
-== Buts de la couche "Internet"
+== Buts de la couche "Réseau"
 
-* Gestion des adresses
+// * Gestion des adresses
 
-* Gestion du routage
+// * Gestion du routage
 
 == Adresse IP
 

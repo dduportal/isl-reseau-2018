@@ -35,7 +35,7 @@ Source: http://albertoalvarez95.wixsite.com/prblog/single-post/2016/02/25/Les-di
 * Couche Transport:
 ** Garantie des niveaux de service
 
-* Couche "Internet Protocol":
+* Couche Réseau:
 ** Gestion des adresses
 
 * Couche "Liaison de données":
