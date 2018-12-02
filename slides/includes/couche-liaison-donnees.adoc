@@ -199,7 +199,7 @@ image::hub.png[]
 [{invert}]
 == Ethernet : Chaînage de concentrateurs
 
-image::hub-interco.png[height=700]
+image::hub-interco.png[height=500]
 
 [{invert}]
 == Ethernet: Cinématique avec un concentrateur 1/2

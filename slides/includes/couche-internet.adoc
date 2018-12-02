@@ -10,13 +10,57 @@ image::tcp-ip-modele-internet-protocol.png[]
 
 == Buts de la couche "Réseau"
 
-// * Gestion des adresses
+Interconnexion des réseaux:
 
-// * Gestion du routage
+* Gestion des adresses
+* Gestion du routage
 
 == Adresse IP
 
-== Masques
+* "I.P." == "Internet Protocol"
+* Adresse logique (virtuelle)
+
+== Adresse IP : Format
+
+* Taille de 32 bits (4 octets)
+* Exprimé avec 4 nombres décimaux
++
+```
+0.0.0.0
+...
+10.0.3.4
+...
+192.168.0.1
+...
+255.255.255.255
+```
+
+== Adresse IP : Codage
+
+L'adresse IP porte 2 informations:
+
+* L'adresse de l'hôte
+* L'adresse du réseau
+
+== Adresse du réseau ?
+
+Wait, what ?
+
+[{invert}]
+== Rappel : Interconnexion de réseaux
+
+// image::cascade_2lvl.gif[height=500]
+image::interco-networks.png[height=500]
+
+== Adresses du Réseau: Abstraction
+
+== Masque Sous-Réseau
+
+* *Problème :* décoder une des 2 informations
+* But :
+* Format: le
+
+
 
 // TODO: Un peu de binaire
 
