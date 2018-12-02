@@ -64,15 +64,24 @@ image::interco-networks.png[height=500]
 
 // TODO: Un peu de binaire
 
+[NOTE.speaker]
+--
+192.168.1.2 & 255.255.255.0
+
+--
+
+== Lien IP / MAC
+
+// TODO: Table ARP
+--
+
 == Classes d'adresses IP
 
 == Broadcast / Unicast
 
 == Exercices de calculs de masques
 
-== Lien IP / MAC
 
-// TODO: Table ARP
 
 == Exercices avec ARP
 
