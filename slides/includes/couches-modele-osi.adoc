@@ -16,8 +16,12 @@ image:hal-replace-light-bulb.gif[height=500, width=800]
 == Le modèle "OSI"
 
 * OSI = "Open Systems Interconnection"
-* Modèle standard International (ISO-7498)
-* Modèle initial sur fond de combats industriels dans les années 1970s
+** Modèle standard International (ISO-7498)
+** Modèle initial sur fond de combats industriels dans les années 1970s
+
+* Concepts:
+** Chaque couche forme une **abstraction** des couches inférieures
+** Entre 2 hôtes, dialogue couche à couche
 
 [{invert}]
 == OSI Facile

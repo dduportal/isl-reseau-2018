@@ -35,15 +35,6 @@ link:https://containo.us/[Containous] et Freelancer
 
 image::damien.jpg[height=200]
 
-=== Containous
-
-* link:https://containo.us[]
-* We Believe in Open Source
-* We Deliver Træfik
-* Commercial Support for Træfik
-* 12 people, 90% technical experts
-
-image::containous-logo.png["Containous Logo"]
 // //// end of Speaker Slide and Company slide
 
 
@@ -59,7 +50,7 @@ include::./includes/intro-reseau.adoc[]
 include::./includes/couches-modele-osi.adoc[]
 include::./includes/couches-modele-internet-protocol.adoc[]
 include::./includes/couche-liaison-donnees.adoc[]
-include::./includes/couche-internet.adoc[]
+include::./includes/couche-reseau.adoc[]
 include::./includes/couche-transport.adoc[]
 include::./includes/couche-application.adoc[]
 

@@ -1,0 +1,292 @@
+
+= Couche "Réseau"
+
+Modèle "Internet Protocol"
+
+[{invert}]
+== Où sommes nous ?
+
+image::tcp-ip-modele-internet-protocol.png[]
+
+== Buts de la couche "Réseau"
+
+Interconnexion des réseaux:
+
+* Gestion des adresses
+* Gestion du routage
+
+== Adresse IP
+
+* "I.P." == "Internet Protocol"
+* Adresse logique (virtuelle)
+
+== Adresse IP : Format
+
+* Taille de 32 bits (4 octets)
+* Exprimé avec 4 nombres décimaux. Exemples:
+** 0.0.0.0
+** 10.0.3.4
+** 192.168.0.1
+** 255.255.255.255
+
+== Adresse IP : Codage
+
+L'adresse IP porte 2 informations:
+
+* L'adresse de l'hôte
+* L'adresse du réseau
+
+== Adresse du réseau ?
+
+Wait, what ?
+
+3 adresses (MAC, IP, Réseau) ?
+
+== Rappel : Couches = Abstraction
+
+* Les modèles en couches (OSI, TCP/IP) définissent des *abstractions*
+
+* On a une couche physique, toutes les autres sont "logiques":
+** La couche réseau est donc "virtuelle"
+
+* L'adresse MAC est une adresse "physique"
+
+=> Plus que 2 adresses !
+
+[{invert}]
+== Pourquoi des "réseaux" ?
+
+image::reseau-interco.png[]
+
+== Adresses du Réseau: Abstraction
+
+Simplifions (Rappel: link:#descartes[Descartes])
+
+image::reseau-interco-simple.png[]
+
+== Définition d'un "Réseau"
+
+* Groupement logique d'hôtes
+* Abstraction des hôtes pour le monde extérieur
+
+== Réseau Locaux / Globaux
+
+* Réseau "local" ("LAN - Local Area Network") :
+** On parle d'un "segment"
+
+* Réseau "global" ("WAN - Wide Area Network) :
+** Interconnexion de segments
+
+== 2 adresses en 1
+
+* Q: Certes, mais comment l'adresse IP peut-elle embarquer 2 adresses en 1 ?
+* R: Avec ce qu'on appelle le "masque sous-réseau"
+
+[{invert}]
+== Qui se souvient ?
+
+image::lunettes-3d.jpg[]
+
+C'est pareil pour le masque sous réseau
+
+== Masque Sous-Réseau
+
+Concept: 
+
+* On applique un "masque" sur l'adresse IP
+** Le résultat est l'adresse du réseau
+
+* Au lieu du bleu/rouge, on utilise le binaire
+
+* Si on n'a pas le même nombre de bits, alors on ajoute des 0
+** On doit donc avoir le même format que l'adresse IP
+
+== Opération "ET logique"
+
+* Utilisation de l'opération "ET logique"
+** Ressemble à la multiplication:
+*** 0 ET 0 = 0
+*** 1 ET 0 = 0
+*** 0 ET 1 = 0
+*** 1 ET 1 = 1
+
+== Calcul du masque sous-réseau
+
+* On aligne les bits entre l'IP et le masque
+* On effectue les opérations de "ET logique" bit à bit
+* On récupère le résultat
++
+[source]
+----
+11000000.10101000.00001010.00010100 // 192.168.10.20
+ET
+11111111.11111111.11111111.00000000 // 255.255.255.0
+=
+11000000.10101000.00001010.00000000 // 192.168.10.0
+----
+
+== Exercices masque sous-réseau
+
+* Quel est le réseau de l'adresse IP `192.168.1.2` (masque: `255.255.0.0`) ?
+* Quel est le réseau de l'adresse IP `10.128.4.10` (masque: `255.255.240.0`) ?
+* Quel est le réseau de l'adresse IP `172.195.4.1` (masque: `255.240.0.0`) ?
+
+[NOTE.speaker]
+--
+Solutions:
+
+```
+11000000.10101000.00000001.00000010 // 192.168.1.2
+ET
+11111111.11111111.00000000.00000000 // 255.255.0.0
+=
+11000000.10101000.00000000.00000000 // 192.168.0.0
+```
+
+```
+00001010.10000000.00000100.00001010 // 10.128.4.10
+ET
+11111111.11111111.11110000.00000000 // 255.255.240.0
+=
+00001010.10000000.00000000.00000000 // 10.128.0.0
+```
+
+```
+10101100.11000011.00000100.00000001 // 172.195.4.1
+ET
+11111111.11110000.00000000.00000000 // 255.240.0.0
+=
+10101100.11000000.00000000.00000000 // 172.192.0.0
+```
+--
+
+== Restriction des bits du masque
+
+* Est-ce qu'il y a des bandes rouges dans le verre bleu des lunettes ?
+
+* Un masque sous-réseau est toujours séparé en deux parties :
+** Une série de 1 contigus
+** Puis une série de 0 contigus
+
+== Exercice de reconnaissance de masques
+
+Quelles sont les masques sous réseau valides ?
+
+* 255.255.128.0
+* 255.255.255.192
+* 192.192.0.0
+* 192.192.0.0
+* 255.248.0.0
+* 255.255.255.252
+* 0.0.0.0
+
+== Obsolète: Classes d'adresses IP
+
+|===
+|Classe |Bits de départ |Début |Fin
+
+|Classe A
+|0
+|0.0.0.0
+|127.255.255.2553
+
+|Classe B
+|10
+|128.0.0.0
+|191.255.255.255
+
+|Classe C
+|110
+|192.0.0.0
+|223.255.255.255
+|===
+
+(Les classes D et E existaient également pour des adresses réservées)
+
+== Notation CIDR
+
+* Depuis 1994, on utilise la notation "CIDR" au lieu des classes d'IP
+** Beaucoup plus modulaire et adaptable
+
+* On ajoute un suffixe à l'adresse IP
+** Séparateur: caractètre slash `/`
+** Valeur du suffixe : nombre décimal indiquant le nombre de "1" du masque
+
+== Exemple de notation CIDR
+
+* `255.255.0.0` = `11111111.11111111.00000000.00000000` 
+* => 16 zéros
+* L'adresse IP `192.168.2.1` associée au masque `255.255.0.0` est donc écrite `192.168.2.1/16`
+* On écrit également son réseau ainsi = `192.168.0.0/16`
+
+== Exercices CIDR
+
+* Donnez la notation CIDR de l'adresse IP `10.172.0.5` avec le masque `255.255.255.0`
+* Donnez la notation CIDR de l'adresse IP `127.0.0.1` avec le masque `255.240.0.0`
+* Donnez la notation CIDR de l'adresse IP `172.10.16.192` avec le masque `255.255.252.0`
+
+[NOTE.Speaker]
+--
+
+--
+
+== Lien IP / MAC
+
+// TODO: Table ARP
+--
+
+== Classes d'adresses IP
+
+== Broadcast / Unicast
+
+== Exercices de calculs de masques
+
+
+
+== Exercices avec ARP
+
+// https://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/
+
+== Rappel Modèle Couches
+
+// TODO: Exemples de liens avec Hub/Switch/CPL
+
+== Rappel Topologies
+
+// TODO: Topologie Virtuelle
+
+== Sous réseaux
+
+// TODO: Rappel LAN/WAN
+
+== Passerelle
+
+// TODO: SI classes IPs, alors comment gérer le problème globalement?
+
+== Routeur
+
+== Routage
+
+== Table de routage
+
+== Exercice avec la table de routage
+
+// https://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/
+
+== Translation d'adresse réseau
+
+// TODO: NAT
+
+== Protocole ICMP
+
+// TODO: https://www.webopedia.com/TERM/I/ICMP.html
+
+== Ping: un outil se basant sur ICMP
+
+== Exercie avec Ping
+
+// https://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/
+
+== Exercice avec nmap
+
+// TODO: Découverte des IPs sur le réseau

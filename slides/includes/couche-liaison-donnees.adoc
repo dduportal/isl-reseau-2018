@@ -302,11 +302,3 @@ image::ethernet-wiring-straight.png[width=900]
 --
 
 // https://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/
-
-== Réseau Locaux / Globaux
-
-* Réseau "local" ("LAN - Local Area Network") :
-** On parle d'un "segment"
-
-* Réseau "global" ("WAN - Wide Area Network) :
-** Interconnexion de segments
