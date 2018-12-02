@@ -356,25 +356,32 @@ image::arp.png[height=500]
 
 == Passerelle
 
+* Adresse du réseau local
+** Concept logique
+
 * Destination des requêtes extra-réseau
 ** "Porte de sortie" du réseau
 
-* Appartient à 2 réseaux : 1 parent et 1 enfant (le nôtre)
+== Routeur
+
+* Hôte appartenant à 2 (ou plus) réseaux
+
+* C'est la machine qui fait "passerelle"
+
+* Il faut un retour aux requêtes émises:
+** Entrée / sortie d'un réseau
 
 == Et Caetera
 
-* La passerelle étant elle-même un noeud du réseau "parent"
+* Le routeur étant lui-même un noeud du réseau "parent"
 ** Soit le destinataire est dans son réseau parent
-** Soit elle transmet à la passerelle du réseau parent
+** Soit il transmet à la passerelle du réseau parent
 
-// == Routeur
-
-// ** "Passe-plats"
-
-// * Entrée / sortie d'un réseau
-// ** Fait office de passerelle
+* Et Caetera...
 
 == Table de routage
+
+// Lien entre réseau + images
 
 == Exercice avec la table de routage
 
