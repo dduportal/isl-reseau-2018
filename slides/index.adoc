@@ -45,7 +45,7 @@ image::damien.jpg[height=200]
 :leveloffset: +1
 
 include::./includes/intro-binaire.adoc[]
-include::./includes/intro-linux-cli.adoc[]
+// include::./includes/intro-linux-cli.adoc[]
 include::./includes/intro-reseau.adoc[]
 include::./includes/couches-modele-osi.adoc[]
 include::./includes/couches-modele-internet-protocol.adoc[]

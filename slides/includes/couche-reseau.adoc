@@ -118,11 +118,11 @@ Concept:
 +
 [source]
 ----
-11000000.10101000.00001010.00010100 // 192.168.10.20
+11000000.10101000.00001010.00010100 => 192.168.10.20
 ET
-11111111.11111111.11111111.00000000 // 255.255.255.0
+11111111.11111111.11111111.00000000 => 255.255.255.0
 =
-11000000.10101000.00001010.00000000 // 192.168.10.0
+11000000.10101000.00001010.00000000 => 192.168.10.0
 ----
 
 == Exercices masque sous-réseau
@@ -222,50 +222,157 @@ Quelles sont les masques sous réseau valides ?
 == Exercices CIDR
 
 * Donnez la notation CIDR de l'adresse IP `10.172.0.5` avec le masque `255.255.255.0`
-* Donnez la notation CIDR de l'adresse IP `127.0.0.1` avec le masque `255.240.0.0`
-* Donnez la notation CIDR de l'adresse IP `172.10.16.192` avec le masque `255.255.252.0`
+* Donnez la notation CIDR du réseau de l'adresse IP `192.168.2.1` avec le masque `255.240.0.0`
+* Quel est la masque correspondant à l'adresse IP `172.10.16.192/16` ?
 
-[NOTE.Speaker]
+[NOTE.speaker]
 --
 
+* `10.172.0.5/24`
+* `192.160.0.0/12`
+* `255.255.252.0`
+
 --
 
-== Lien IP / MAC
+[{invert}]
+== Après les adresses, le "Routage"
 
-// TODO: Table ARP
+Comment envoyer un message d'une adresse à une autre ?
+
+image::routage-reseaux.png[height=500]
+
+[.small]
+https://openclassrooms.com/fr/courses/1561696-les-reseaux-de-zero[Source]
+
+== Routage
+
+Mécanisme de détermination du chemin pour la distribution du message
+
+image::routage.png[height=500]
+
+== Topologies de Routage
+
+* Unicast
+* Broadcast
+* Anycast
+* Multicast
+
+== Routage Unicast
+
+* Depuis 1 hôte vers 1 autre hôte: "Point à point"
+
+image::unicast.png[height=500]
+
+== Routage Broadcast
+
+* Depuis 1 hôte vers tous les hôtes du réseau local
+
+image::broadcast.png[height=500]
+
+== Routage Anycast
+
+* Depuis 1 hôte vers les hôtes les plus "proches" en multi-chemin
+
+image::anycast.png[height=500]
+
+[NOTE.speaker]
+--
+Exemple: Routage BGP
 --
 
-== Classes d'adresses IP
+== Routage Multicast
 
-== Broadcast / Unicast
+* Depuis 1 hôte vers les hôtes "abonnés"
 
-== Exercices de calculs de masques
+image::multicast.png[height=500]
 
+[Note.speaker]
+--
+Exemple: diffusion streaming
+--
 
+== Routage Local
+
+* Je suis `192.168.2.4`
+** Je veux envoyer un message à `192.168.2.7` (unicast)
+** Mon réseau est `192.168.2.0/24`
+
+* Nous sommes dans le même réseau (à vérifier pour le sport)
+** Le switch connaîtra l'adresse MAC: communication facile
+
+== Mais... et l'abstraction ?
+
+* On la respecte !
+
+* Mais il faut bien donner un destinataire à la couche "Liaison de Données".
+
+* En l'occurence: une adresse MAC.
+
+[{invert}]
+== Rappel : Transmission de données en TCP/IP
+
+image::tcp-ip-layer-transmit-data.jpg[]
+
+== ARP
+
+* A.R.P. = "Address Resolution Protocol"
+* Lien entre les couches 2 (Liaison) et 3 (IP)
+* Protocole "question / réponse":
+** On demande une adresse IP
+** On obtient une (ou plusieurs) adresses MAC
+** On peut "forger" les messages !
+
+[{invert}]
+== Requête ARP
+
+image::arp.png[height=500]
+
+== Table ARP
+
+* On peut donc "conserver" ces paires d'adresses IP/MAC
+** But : meilleure performances de communication
+** "Mise en cache" : notion de durée de vie
+
+* Une table ARP par hôte du réseau *local*
 
 == Exercices avec ARP
 
-// https://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/
+// // https://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/
 
-== Rappel Modèle Couches
+[NOTE.speaker]
+--
+* Table ARP sous Windows et Linux: `arp -a`
+* Cleanup table `arp -d`
+--
 
-// TODO: Exemples de liens avec Hub/Switch/CPL
+== Routage "Global"
 
-== Rappel Topologies
+* Je suis `192.168.2.4`
+** Je veux envoyer un message à `72.54.67.128` (unicast)
+** Mon réseau est `192.168.2.0/24`
 
-// TODO: Topologie Virtuelle
-
-== Sous réseaux
-
-// TODO: Rappel LAN/WAN
+* Nous sommes dans des réseaux différents
+** Problème: comment faire ?
 
 == Passerelle
 
-// TODO: SI classes IPs, alors comment gérer le problème globalement?
+* Destination des requêtes extra-réseau
+** "Porte de sortie" du réseau
 
-== Routeur
+* Appartient à 2 réseaux : 1 parent et 1 enfant (le nôtre)
 
-== Routage
+== Et Caetera
+
+* La passerelle étant elle-même un noeud du réseau "parent"
+** Soit le destinataire est dans son réseau parent
+** Soit elle transmet à la passerelle du réseau parent
+
+// == Routeur
+
+// ** "Passe-plats"
+
+// * Entrée / sortie d'un réseau
+// ** Fait office de passerelle
 
 == Table de routage
 

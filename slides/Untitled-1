@@ -3,12 +3,8 @@
 - ping
 - traceroute
 
-- Codage de 2 informations: Adresse de l'hôte, et celle du réseau.
-  => Masque sous réseau pour décoder.
-  - Exercice 192.168.1.4 avec 255.255.255.0
-- Continuité des bits du masque
-  - Execice: trouver toutes les valeurs possibles par octet
-- Notation CIDR avec le slash (nombre de bits à 1)
+-Slide Récap Topologies reseau
+
 - Plage d'adresse: Pour un réseau donné. IP et masque, donner début et fin.
   - Exercice 192.168.1.4 avec 255.255.255.0, puis 255.255.240.0, puis 255.255.0.0
 - Adresses IP réservées / spéciales
