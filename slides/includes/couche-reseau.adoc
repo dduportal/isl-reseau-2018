@@ -17,17 +17,28 @@ Interconnexion des réseaux:
 
 == Adresse IP
 
-* "I.P." == "Internet Protocol"
-* Adresse logique (virtuelle)
+* "IP" désigne aussi bien l'adresse que le protocole de communication :
+** "I.P." == "Internet Protocol"
+** Adresse logique (virtuelle)
 
-== Adresse IP : Format
+* 2 normes IPs:
+** Version 4 : IPv4 (défaut dans ce cours)
+** Version 6 : IPv6 (raison: épuisement du stock d'adresse IPv4... en théorie)
+
+== Adresse IPv4 : Format
 
 * Taille de 32 bits (4 octets)
-* Exprimé avec 4 nombres décimaux. Exemples:
+* Exprimé avec 4 nombres décimaux séparés par des points `.`. Exemples:
 ** 0.0.0.0
 ** 10.0.3.4
 ** 192.168.0.1
 ** 255.255.255.255
+
+== Adresse IPv6 : Format
+
+* Taille de 128 bits
+* Exprimé en suite de nombre hexa-décimaux, séparés par des double point `: `
+** Exemple : 001:0db8:0000:85a3:0000:0000:ac1f:8001
 
 == Adresse IP : Codage
 
@@ -203,6 +214,47 @@ Quelles sont les masques sous réseau valides ?
 
 (Les classes D et E existaient également pour des adresses réservées)
 
+== Adresse IPv4 "Spéciales" 1/2
+
+|===
+|Bloc |Usage
+
+|0.0.0.0/8 	
+|Ce réseau
+
+|127.0.0.0/8 	
+|adresse de bouclage (localhost)
+
+|10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 
+|Adresses privées
+
+|...
+|...
+
+|===
+
+== Adresse IPv4 "Spéciales" 2/2
+
+|===
+|Bloc |Usage
+
+|169.254.0.0/16 	
+|adresses locales autoconfigurées
+
+|255.255.255.255/32 	
+|broadcast limité
+
+|100.64.0.0/10 	
+|Espace partagé pour Carrier Grade NAT
+
+|224.0.0.0/4 	
+|Multicast "Multidiffusion" 
+
+|...
+|...
+
+|===
+
 == Notation CIDR
 
 * Depuis 1994, on utilise la notation "CIDR" au lieu des classes d'IP
@@ -335,14 +387,43 @@ image::arp.png[height=500]
 
 * Une table ARP par hôte du réseau *local*
 
+== Ping
+
+* "Ping" est une question, qui attends une réponse "Pong"
+* Commande permettant de tester l'accessibilité d'une machine via la couche "réseau"
+* Utilises le protocole "ICMP" (Internet Control Message Protocol)
+** Encapsulation dans le protocol IP
+
+== Exercices avec `ping`
+
+[NOTE.speaker]
+--
+* Vérifier la présence de la commande `ping`
+** `which ping` sous Linux
+** `where ping` sous Windows
+
+* `ping 127.0.0.1` puis `CTRL-C` pour s'arrêter
+* `ping -c3 127.0.0.1`
+* `ping -c3 192.168.2.1`
+* `ping -c3 192.168.2.x` (soi même)
+* `ping -c3 192.168.2.y` (Voisin)
+* `ping -c3 Google`
+--
+
 == Exercices avec ARP
 
 // // https://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/
 
 [NOTE.speaker]
 --
-* Table ARP sous Windows et Linux: `arp -a`
 * Cleanup table `arp -d`
+* Table ARP sous Linux: `arp -e` (Note: `arp -a` existe également)
+* Voir la liste des IPs courante
+* Pinger son voisin
+* Comment est-ce que la table a évolué
+* Supprimer une entrée avec `arp -d <entrée>`
+* Vérifier la table mise à jour
+* Essayer sous Windows avec `arp -a`
 --
 
 == Routage "Global"
@@ -385,27 +466,141 @@ image::router-interco-networks.png[height=600]
 
 == Droit de réponse
 
+* On a pu faire l'aller. Mais quid de la requête retour?
+
+* Exemple de `ping` qui attend son `pong`...
+
 == Table de routage
 
-// Lien entre réseau + images
+* Table stockée sur chaque hôte (routeur inclus)
+* Liste les passerelles **connues** sur lesquelles envoyer les requêtes
+** Ne contient QUE les réseaux de l'hôte
+* En fonction des adresses IP des destinataires
+* Contient toujours une route par défaut
 
-== Exercice avec la table de routage
+== Règles de remplissage de la table de routage
 
-// https://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/
+* Remplir en 3 temps:
+** Une entrée par réseau d'appartenance
+** Une entrée par défaut
+** Une entrée "statique" par réseau à connaître
 
-== Translation d'adresse réseau
+* Les passerelles indiquées dans une table de routage 
+appartiennent toujours à l'un des réseaux auxquels j'appartiens
 
-// TODO: NAT
+* Toujours une règle par défaut
 
-== Protocole ICMP
+== Exemple de Table de routage
 
-// TODO: https://www.webopedia.com/TERM/I/ICMP.html
+Reprenons notre double réseau :
 
-== Ping: un outil se basant sur ICMP
+image::router-interco-networks.png[height=600]
 
-== Exercie avec Ping
+== Table de Routage pour une machine
 
-// https://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/
+Pour une machine "simple", c'est facile. Prenons `192.168.1.10` :
+
+|===
+|Réseau à joindre |Passerelle
+
+|192.168.1.0/24
+|192.168.1.10
+
+|0.0.0.0/0
+|192.168.1.1
+
+|===
+
+* Une entrée pour le réseau auquel on appartient
+* Une entrée par défaut
+
+== Rappel
+
+Reprenons notre double réseau :
+
+image::router-interco-networks.png[height=600]
+
+== Table de Routage pour le Routeur
+
+Pour le routeur, c'est presque aussi facile :
+
+|===
+|Réseau à joindre |Passerelle
+
+|192.168.1.0/24
+|192.168.1.1
+
+|10.0.2.0/16
+|10.0.2.1
+
+|0.0.0.0/0
+|127.0.0.1
+
+|===
+
+* Une entrée pour **chaque** réseau auquel on appartient
+* Une entrée par défaut
+** On suppose ici que le routeur est autonome
+
+[{invert}]
+== Exercice avec la table de routage 1/3
+
+image::reseaux-complexe-routage.png[height=550]
+
+[.small]
+https://openclassrooms.com/fr/courses/1561696-les-reseaux-de-zero[Source]
+
+== Exercice avec la table de routage 2/3
+
+* Quel est la table de routage de 192.168.0.1 ?
+
+[NOTE.speaker]
+--
+|===
+|Réseau à joindre |Passerelle
+
+|192.168.0.0/24
+|192.168.0.1
+
+|0.0.0.0/0
+|192.168.0.254
+
+|10.0.0.0/24
+|192.168.0.253
+
+|===
+--
+
+== Exercice avec la table de routage 3/3
+
+* Quel est la table de routage de "Routeur 1" ?
+
+[NOTE.speaker]
+--
+|===
+|Réseau à joindre |Passerelle
+
+|192.168.0.0/24
+|192.168.0.254
+
+|192.168.1.0/24
+|192.168.1.254
+
+|0.0.0.0/0
+|192.168.1.253
+
+|10.0.0.0/24
+|192.168.0.253
+
+|===
+--
+
+== Pratiquons avec la table de routage
+
+```
+sudo su - # Become root
+netstat -rn # Show Tables
+```
 
 == Exercice avec nmap
 
