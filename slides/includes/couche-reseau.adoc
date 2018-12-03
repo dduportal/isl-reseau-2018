@@ -371,6 +371,10 @@ image::arp.png[height=500]
 * Il faut un retour aux requêtes émises:
 ** Entrée / sortie d'un réseau
 
+== Exemple de réseaux avec un routeur
+
+image::router-interco-networks.png[height=600]
+
 == Et Caetera
 
 * Le routeur étant lui-même un noeud du réseau "parent"
@@ -378,6 +382,8 @@ image::arp.png[height=500]
 ** Soit il transmet à la passerelle du réseau parent
 
 * Et Caetera...
+
+== Droit de réponse
 
 == Table de routage
 
