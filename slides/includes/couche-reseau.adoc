@@ -102,7 +102,7 @@ C'est pareil pour le masque sous réseau
 
 == Masque Sous-Réseau
 
-Concept: 
+Concept:
 
 * On applique un "masque" sur l'adresse IP
 ** Le résultat est l'adresse du réseau
@@ -219,13 +219,13 @@ Quelles sont les masques sous réseau valides ?
 |===
 |Bloc |Usage
 
-|0.0.0.0/8 	
+|0.0.0.0/8
 |Ce réseau
 
-|127.0.0.0/8 	
+|127.0.0.0/8
 |adresse de bouclage (localhost)
 
-|10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 
+|10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
 |Adresses privées
 
 |...
@@ -238,17 +238,17 @@ Quelles sont les masques sous réseau valides ?
 |===
 |Bloc |Usage
 
-|169.254.0.0/16 	
+|169.254.0.0/16
 |adresses locales autoconfigurées
 
-|255.255.255.255/32 	
+|255.255.255.255/32
 |broadcast limité
 
-|100.64.0.0/10 	
+|100.64.0.0/10
 |Espace partagé pour Carrier Grade NAT
 
-|224.0.0.0/4 	
-|Multicast "Multidiffusion" 
+|224.0.0.0/4
+|Multicast "Multidiffusion"
 
 |...
 |...
@@ -266,7 +266,7 @@ Quelles sont les masques sous réseau valides ?
 
 == Exemple de notation CIDR
 
-* `255.255.0.0` = `11111111.11111111.00000000.00000000` 
+* `255.255.0.0` = `11111111.11111111.00000000.00000000`
 * => 16 zéros
 * L'adresse IP `192.168.2.1` associée au masque `255.255.0.0` est donc écrite `192.168.2.1/16`
 * On écrit également son réseau ainsi = `192.168.0.0/16`
@@ -338,7 +338,7 @@ Exemple: Routage BGP
 
 image::multicast.png[height=500]
 
-[Note.speaker]
+[NOTE.speaker]
 --
 Exemple: diffusion streaming
 --
@@ -363,7 +363,7 @@ Exemple: diffusion streaming
 [{invert}]
 == Rappel : Transmission de données en TCP/IP
 
-image::tcp-ip-layer-transmit-data.jpg[]
+image::tcp-ip-layer-transmit-data.jpg[height=500]
 
 == ARP
 
@@ -414,17 +414,15 @@ image::arp.png[height=500]
 
 // // https://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/
 
-[NOTE.speaker]
---
-* Cleanup table `arp -d`
-* Table ARP sous Linux: `arp -e` (Note: `arp -a` existe également)
-* Voir la liste des IPs courante
-* Pinger son voisin
-* Comment est-ce que la table a évolué
-* Supprimer une entrée avec `arp -d <entrée>`
-* Vérifier la table mise à jour
-* Essayer sous Windows avec `arp -a`
---
+[source,bash]
+----
+$ sudo su - # Devenir root
+root$ arp -a # Afficher la table ARP (Linux et Windows)
+root$ arp -d <IP> # Supprimer l'entrée correspondant à <IP>
+root$ arp -a
+root$ ping -c3 <IP voisin>
+root$ arp -a # Quelle différence ?
+----
 
 == Routage "Global"
 
@@ -485,7 +483,7 @@ image::router-interco-networks.png[height=600]
 ** Une entrée par défaut
 ** Une entrée "statique" par réseau à connaître
 
-* Les passerelles indiquées dans une table de routage 
+* Les passerelles indiquées dans une table de routage
 appartiennent toujours à l'un des réseaux auxquels j'appartiens
 
 * Toujours une règle par défaut
@@ -604,4 +602,6 @@ netstat -rn # Show Tables
 
 == Exercice avec nmap
 
-// TODO: Découverte des IPs sur le réseau
+```
+nmap -sN 192.168.2.0/16 # Découverte des IPs sur le réseau
+```

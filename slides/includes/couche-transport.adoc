@@ -14,15 +14,97 @@ image::tcp-ip-modele-transport.png[]
 
 * Gestion du niveau d'intégrité des données transmises
 
-* Gestion des performances et des états
+== Encore une adresse !
+
+* Problème :
+** On sait dialoguer entre machines
+** Une machine possède plusieurs applications
+
+* Comment faire le lien entre X application et 1 machine ?
+** Il faut une adresse par application
+
+[{invert}]
+== Port : l'adresse de la couche Transport
+
+* Idée : on associe 1 nombre entier par application
+** C'est ce qu'on appelle le "port"
+
+* On peut donc "multiplexer" pour une même adresse IP
+
+image::tcp-ip-ports-sockets.jpg[height=200]
+// image::multiplex-demultiplex.png[height=200]
+
+== Problèmes de la couche Réseau
+
+* Le rôle de la couche réseau est de "router" de la donnée d'un hôte à un autre.
+
+* Et c'est tout !
+** Pas sûr que les paquets arrivent (Ping ? ICMP!)
+** Pas de contrôle d'intégrité
+** Pas de garantie d'ordre d'arrivée
+
+== Protocoles de Transport
+
+* Il faut des protocoles de communication au dessus de IP
+** On est dans une couche virtuelle: tout est possible!
+
+* Protocoles étudiés:
+** TCP
+** UDP
+
+* Protocoles "mentionnés"
+** https://en.wikipedia.org/wiki/QUIC[QUIC (Google, 201x)]
+** https://en.wikipedia.org/wiki/Stream_Control_Transmission_Protocol[SCTP]
 
 == TCP
 
+* TCP = "Transmission Control Protocol"
+* https://tools.ietf.org/html/rfc793[RFC 793]
+* Unité de donnée : "paquets TCP"
+* Se base sur IP pour la couche réseau
+
+== Caractéristisques de TCP
+
+* Mode "connecté" entre 2 ports... de 2 hôtes différents
+* Garantie un bon acheminement des données
+* Mémorisation des données
+* Indépendant vis-à-vis des données transportées (comme IP)
+* "Communication bi-directionnelle" (full duplex) : échange dans les 2 sens **en même temps**
+
+== TCP dans tous ses "états"
+
+image::tcp-state-diagram.png[height=500]
+
+== TCP : Protocole et poignées de mains
+
+image::tcp-connect.png[height=500]
+
 == UDP
 
-== Ports
+== Pratique : voir les Ports
 
-// TODO: multiplexer
+```
+$ sudo netstat -anptu4
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 127.0.0.1:10248         0.0.0.0:*               LISTEN      1863/kubelet
+tcp        0      0 127.0.0.1:10249         0.0.0.0:*               LISTEN      2076/kube-proxy
+tcp        0      0 0.0.0.0:5355            0.0.0.0:*               LISTEN      369/systemd-resolve
+tcp        0      0 127.0.0.1:43405         0.0.0.0:*               LISTEN      1863/kubelet
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      432/sshd
+tcp        0    196 192.168.0.9:22          192.168.0.18:61667      ESTABLISHED 14073/sshd: pirate
+udp        0      0 127.0.0.53:53           0.0.0.0:*                           369/systemd-resolve
+udp        0      0 0.0.0.0:68              0.0.0.0:*                           325/dhcpcd
+udp        0      0 169.254.47.88:123       0.0.0.0:*                           409/ntpd
+udp        0      0 10.244.2.0:123          0.0.0.0:*                           409/ntpd
+udp        0      0 192.168.0.9:123         0.0.0.0:*                           409/ntpd
+udp        0      0 127.0.0.1:123           0.0.0.0:*                           409/ntpd
+udp        0      0 0.0.0.0:123             0.0.0.0:*                           409/ntpd
+udp        0      0 0.0.0.0:32892           0.0.0.0:*                           361/avahi-daemon: r
+udp        0      0 0.0.0.0:5353            0.0.0.0:*                           361/avahi-daemon: r
+udp        0      0 0.0.0.0:5355            0.0.0.0:*                           369/systemd-resolve
+udp        0      0 0.0.0.0:8472            0.0.0.0:*                           -
+```
 
 == Translation de port réseau
 
