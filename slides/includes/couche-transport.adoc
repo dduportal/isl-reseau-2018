@@ -71,47 +71,66 @@ image::tcp-ip-ports-sockets.jpg[height=200]
 * Indépendant vis-à-vis des données transportées (comme IP)
 * "Communication bi-directionnelle" (full duplex) : échange dans les 2 sens **en même temps**
 
+[{invert}]
 == TCP dans tous ses "états"
 
-image::tcp-state-diagram.png[height=500]
+image::tcp-state-diagram.png[height=550]
 
 == TCP : Protocole et poignées de mains
 
 image::tcp-connect.png[height=500]
 
+== Limites de TCP
+
+* Complexe
+* "Couteux" en temps
+** Délai d'établissement d'une connexion
+** Nombre d'aller-retours sur le réseau
+
 == UDP
+
+* UDP = "User Datagram Protocol"
+* https://tools.ietf.org/html/rfc768[RFC 768]
+* Unité de donnée: "datagramme UDP" (comme IP)
+* Se base sur IP pour la couche réseau
+
+== Caractéristisques de UDP
+
+* Concept : "Fire and Forget"
+
+* Pas de mode connecté: **Simple**
+** Pas de garantie d'arrivée de la donnée
+
+* Intégrité de la donnée garanti
+** SI la donnée arrive
+
+* Cas d'usages:
+** Performances
+** Petite quantité de données
 
 == Pratique : voir les Ports
 
 ```
+$ sudo netstat -anpt
+...
+$ sudo netstat -anpt
+...
+$ sudo netstat -anpu
+...
 $ sudo netstat -anptu4
-Active Internet connections (servers and established)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
-tcp        0      0 127.0.0.1:10248         0.0.0.0:*               LISTEN      1863/kubelet
-tcp        0      0 127.0.0.1:10249         0.0.0.0:*               LISTEN      2076/kube-proxy
-tcp        0      0 0.0.0.0:5355            0.0.0.0:*               LISTEN      369/systemd-resolve
-tcp        0      0 127.0.0.1:43405         0.0.0.0:*               LISTEN      1863/kubelet
-tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      432/sshd
-tcp        0    196 192.168.0.9:22          192.168.0.18:61667      ESTABLISHED 14073/sshd: pirate
-udp        0      0 127.0.0.53:53           0.0.0.0:*                           369/systemd-resolve
-udp        0      0 0.0.0.0:68              0.0.0.0:*                           325/dhcpcd
-udp        0      0 169.254.47.88:123       0.0.0.0:*                           409/ntpd
-udp        0      0 10.244.2.0:123          0.0.0.0:*                           409/ntpd
-udp        0      0 192.168.0.9:123         0.0.0.0:*                           409/ntpd
-udp        0      0 127.0.0.1:123           0.0.0.0:*                           409/ntpd
-udp        0      0 0.0.0.0:123             0.0.0.0:*                           409/ntpd
-udp        0      0 0.0.0.0:32892           0.0.0.0:*                           361/avahi-daemon: r
-udp        0      0 0.0.0.0:5353            0.0.0.0:*                           361/avahi-daemon: r
-udp        0      0 0.0.0.0:5355            0.0.0.0:*                           369/systemd-resolve
-udp        0      0 0.0.0.0:8472            0.0.0.0:*                           -
+...
 ```
 
-== Translation de port réseau
+== PAT / NAT
 
-== Rappel Router
+* Vous vous souvenez du NAT?
 
-// TODO: Réintégrer concept translation
+* Problème : On voudrait 1 IP publiques pour X IP privées
 
-== Exercice avec nmap
+* Solution : utiliser le port
+** PAT = "Port Adresse Translation"
+** Egalement connu comme "NAT Dynamique"
 
-// TODO: Découverte des ports ouverts sur un hôte du réseau
+== NAT/PAT en image
+
+image::pat.jpg[height=550]

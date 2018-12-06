@@ -600,6 +600,16 @@ sudo su - # Become root
 netstat -rn # Show Tables
 ```
 
+== NAT
+
+* NAT = "Network Adress Translation"
+* 1 IP privée == 1 IP publique
+
+[{invert}]
+== NAT en image
+
+image::nat-static.jpg[height=500]
+
 == Exercice avec nmap
 
 ```

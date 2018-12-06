@@ -32,6 +32,10 @@ image::tcp-ip-modele-application.png[]
 
 // TODO: Connexion à un serveur distant
 
+== DHCP
+
+== Exercises avec DHCP
+
 == HTTP
 
 // TODO: TCP / états
