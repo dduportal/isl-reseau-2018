@@ -16,6 +16,33 @@ image::tcp-ip-modele-application.png[]
 
 * Plein de protocoles connus se trouvent ici: HTTP, SSH, FTP, P2P, etc.
 
+== Socket
+
+* "Adresse" de la couche Application
+* "Tube" dans lequel lire et écrire
+* Couple Adresse IP + Port
+** Ou un fichier ("Socket Unix" / "Named Pipe" dans Windows)
+
+// TODO Schéma ports
+
+== Client / Serveur
+
+* Architecture 2 tiers
+* Initiative du client
+
+== Serveur
+
+* Ecoute sur un socket ("passif")
+* Réponds aux requêtes ("actif")
+* Emets les réponses
+
+== Client
+
+* Ecrit sur un socket
+* Emets des requêtes
+* Reçois les réponses
+
+
 == DNS
 
 // TODO: UDP

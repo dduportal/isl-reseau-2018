@@ -101,7 +101,7 @@ image::tcp-connect.png[height=500]
 * Pas de mode connecté: **Simple**
 ** Pas de garantie d'arrivée de la donnée
 
-* Intégrité de la donnée garanti
+* Intégrité de la donnée garantie
 ** SI la donnée arrive
 
 * Cas d'usages:
@@ -131,6 +131,18 @@ $ sudo netstat -anptu4
 ** PAT = "Port Adresse Translation"
 ** Egalement connu comme "NAT Dynamique"
 
-== NAT/PAT en image
+== NAT/PAT en images
 
-image::pat.jpg[height=550]
+// TODO Image réseau initial
+
+== NAT/PAT en images
+
+* Requête de `192.168.0.1` vers www.google.com (`72.81.154.234`)
+* Sortie
+// TODO : plusieurs slides faisdant le
+
+== Port Forwarding
+
+image::port-forwarding.jpg[height=550]
+
+// TODO: Wireshark pour protocole TCP ?
