@@ -131,18 +131,12 @@ $ sudo netstat -anptu4
 ** PAT = "Port Adresse Translation"
 ** Egalement connu comme "NAT Dynamique"
 
-== NAT/PAT en images
+[{invert}]
+== NAT/PAT en images 1/2
 
-// TODO Image réseau initial
+image::pat-out.jpg[height=500]
 
-== NAT/PAT en images
+[{invert}]
+== NAT/PAT en images 2/2
 
-* Requête de `192.168.0.1` vers www.google.com (`72.81.154.234`)
-* Sortie
-// TODO : plusieurs slides faisdant le
-
-== Port Forwarding
-
-image::port-forwarding.jpg[height=550]
-
-// TODO: Wireshark pour protocole TCP ?
+image::pat-in.jpg[height=500]
