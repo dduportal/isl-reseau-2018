@@ -100,3 +100,71 @@ image::07-vmplayer-ready.png[width=400,float=middle]
 ** Quels sont les droits du fichier `notes.txt` ?
 * Qui est le propriétaire du fichier `/bin/ls` ?
 
+== Installer des paquets
+
+* Terminez la session de l'utilisateur `isl` avec la commande `logout` puis identifiez-vous en tant que `root`
+** OU utilisez la commande `sudo su -`
+* Est-ce que la commande `arp` existe (Indice : `which ls`) ?
+* Mettez à jour le catalogue de "paquets"
+** `apt-get update`
+* Installer le paquet nommé `net-tools`
+** `apt-get install net-tools`
+* Commande `arp` ?
+
+== Exercice Couche Réseau
+
+* Trouvez les informations suivantes :
+** Combien d'interfaces réseau ? (Indice : `ip addr`)
+** Quelles sont les adresse IP de ces interfaces ? (Indice : `ip addr`)
+** Addrsse Ip de la passerelle par défaut du réseau ? (Indice : `ip route`)
+
+* Essayez de "pinguer" 3 fois l'adresse IP de la passerelle
+
+== Exercice Couche Liaison de Données
+
+* Afficher la table ARP (Indice : `arp`)
+* Supprimez toutes les entrées (Indice : `arp --help`)
+* Pourquoi est-ce qu'une des entrées ré-apparait après quelques secondes ?
+* Essayez de pinguer une adresse inexistante du réseau local
+** Quel est la conséquence dans la table ARP ?
+
+== Exercice Couche Transport 1/2
+
+* Quelle sont les "sockets" TCP (IPv4) en état `LISTEN` ?
+** Indice : `netstat`
+* Quelles sont les interfaces réseaux associées ?
+** Indice : utiliser la/les adresse IP associées aux ports
+* Quels sont les applications associées ?
+** Indice : link:https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml[Registre de ports IANA]
+
+== Exercice Couche Transport 2/2
+
+* Un peu de NAT : configurez une redirection de port pour SSH
+** Choisissez le port 2222 sur votre hôte, et le port 22 pour la VM
+** VirtualBox : Réglages de la VM -> Réseau -> dépliez le menu "Avancé" -> "Redirection de ports"
+** VMWare Player : 
+* Confirmez la redirection de ports en vous connectant avec Putty (ou SSH sur Mac/Linux)
+
+== Exercices Couche Application
+
+== Exercices avec DNS
+
+* Donnez une adresse IPv4 d'un serveur derrière le domaine `www.google.com` (Indice : `dig`)
+** Même question mais en interogeant le serveur DNS `1.1.1.1`
+** Pourquoi est-ce que les adresses IPs sont différentes ?
+
+* Quel est l'alias du domaine `dduportal.github.com` (Indice : "CNAME") ?
+
+* Donnez une adresse IP d'un serveur DNS d'authorité du domaine `dduportal.github.com` (Indice : "NS") ?
+
+== Exercices avec HTTP 1/2
+
+* Affichez la page web à l'adresse `http://google.com/`
+** Quel est le résultat ? Pourquoi ?
+* Affichez les en-têtes de la requête précédente (et de sa réponse associée)
+** Comment fonctionne la redirection ?
+** Confirmez votre hypothèse avec un navigateur et son "inspecteur web"
+
+== Exercices avec HTTP 1/2
+
+* Installez le serveur web "Apache" (nom)
