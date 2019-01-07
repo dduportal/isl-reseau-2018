@@ -99,6 +99,8 @@ image::07-vmplayer-ready.png[width=400,float=middle]
 ** Qui est le propriétaire du fichier `notes.txt` ?
 ** Quels sont les droits du fichier `notes.txt` ?
 * Qui est le propriétaire du fichier `/bin/ls` ?
+* Afficher la liste des processus ( Indice : `ps aux`)
+** Quel est le PID du processus `sshd` (Indice : `... | grep 'sshd'`) ?
 
 == Installer des paquets
 
@@ -157,7 +159,7 @@ image::07-vmplayer-ready.png[width=400,float=middle]
 
 * Donnez une adresse IP d'un serveur DNS d'authorité du domaine `dduportal.github.com` (Indice : "NS") ?
 
-== Exercices avec HTTP 1/2
+== Exercices avec HTTP 1/3
 
 * Affichez la page web à l'adresse `http://google.com/`
 ** Quel est le résultat ? Pourquoi ?
@@ -165,6 +167,16 @@ image::07-vmplayer-ready.png[width=400,float=middle]
 ** Comment fonctionne la redirection ?
 ** Confirmez votre hypothèse avec un navigateur et son "inspecteur web"
 
-== Exercices avec HTTP 1/2
+== Exercices avec HTTP 2/3
 
-* Installez le serveur web "Apache" (nom)
+* Installez le serveur web "Nginx" (nom du paquet : `nginx`)
+* Trouvez tous les ports TCP sur lesquels Nginx écoute
+** Essayer d'afficher la page web de défaut en utilisant 2 adresses IP différentes
+* Arrêtez le service et vérifier qu'il ne réponds plus aux requêtes HTTP
+** Vérifiez avec `netstat` et l'option `-p` (Indice : `ps aux | ...`)
+** Redémarrer le service
+
+== Exercices avec HTTP 3/3
+
+* Essayez d'installer le paquet `apache2`
+** Que se passe t'il ?
