@@ -1,0 +1,102 @@
+= Exercices avec une machine virtuelle
+
+== VirtualBox ou VMWare ?
+
+* Si vous êtes chez vous : VirtualBox (gratuit, libre, complet, multi-plateforme)
+** link:https://www.virtualbox.org/wiki/Downloads[VirtualBox à télécharger]
+* A l'école ou si VirtualBox ne fonctionne pas : VMWare Player (gratuit, propriétaire, Windows seulement)
+** link:https://www.vmware.com/fr/products/workstation-player.html[VMWare Player à télécharger]
+
+== VirtualBox
+
+[.small]
+Pour VMWare Player: link:#vmware_player[Cliquez ici]
+
+== Obtenir l'image VirtualBox
+
+* Téléchargez l'image `Debian.ova` sur votre bureau :
+link:https://www.dropbox.com/s/d2hlxar8skcy44g/Debian.ova?dl=0[]
+* Ouvrez VirtualBox
+* Séléctionner le bouton "Importer" et choisissez le fichier `Debian.ova`
+
+image::01-vbox-archive-desktop.png[width=400]
+
+== Créer la VM dans VirtualBox
+
+* Laissez les réglages par défaut :
+
+image::02-vbox-import-defaults.png[width=500]
+
+== Démarrez la VM dans VirtualBox
+
+* Sélectionner la machine "Debian32" nouvellement créée dans la colonne de gauche
+* Cliquez sur le bouton "Start" avec la flèche verte pour démarrer la VM
+* Sautez la section "VMare Player" et accédez à la suite en link:#s_authentifier_sur_la_vm[cliquant ici]
+
+image::03-vbox-start-vm.png[]
+
+== VMWare Player
+
+[.small]
+Pour VirtualBox : link:#virtualbox[Cliquez ici]
+
+== Obtenir l'image pour VMWare Player
+
+* Téléchargez l'archive `Debian.zip` sur votre bureau : 
+link:https://www.dropbox.com/s/ncsz0bmpgdzfdjn/Debian.zip?dl=0[]
+* Décompressez l'image pour obtenir un dossier nommé `Debian` sur le bureau
+
+image::01-vmplayer-extraire-tout.png[width=300,float=left]
+
+image::02-vmplayer-select-bureau.png[width=400,float=middle]
+
+== Créer la VM dans VMWare Player 1/2
+
+* Ouvrir VMWare Player
+* Sélectionner le menu "Player" -> "File" -> "Open..."
+
+image::03-vmplayer-open-vm.png[width=500]
+
+== Créer la VM dans VMWare Player 2/2
+
+* Sélectionner le fichier `debian.vmx` qui se trouve dans le dossier `Debian`
+* Une fois la VM "Debian" créée, cliquer sur le bouton "Play" :
+
+image::04-vmplayer-select-debian.png[width=600,float=left]
+
+image::05-vmplayer-play.png[width=400,float=middle]
+
+== Démarrage de la VM dans VMWare Player
+
+* Si le message "Cannot connect the virtual device ..." apparaît, choisissez le bouton "No"
+* Au bout de quelques secondes apparais l'invitation de connexion
+
+image::06-vmplayer-no-cdrom.png[width=400,float=left]
+
+image::07-vmplayer-ready.png[width=400,float=middle]
+
+== S'authentifier sur la VM
+
+* Identifiez-vous :
+** Utilisateur : `isl`
+** Mot de passe : `isl2018` (aucun caractère n'est affiché quand vous tapez le mot de passe)
+
+== Exercices Ligne de commande Linux 1/2
+
+* Dans quel dossier vous trouvez-vous ?
+* Quel est le contenu de ce dossier (fichiers cachés inclus) ?
+* Quel est le contenu du dossier `/etc` (fichiers cachés inclus) ?
+* Créer un dossier nommé `ISL` (majuscules) dans le "home" de l'utilisateur `isl`
+** Déplacez-vous dans ce dossier
+** Créez-y un fichier `notes.txt` ?
+** Quel est le chemin absolu de ce fichier ?
+
+
+== Exercices Ligne de commande Linux 2/2
+
+* Retournez dans le "home" utilisateur de `isl`
+** Quel est le chemin relatif du fichier `notes.txt` ?
+** Qui est le propriétaire du fichier `notes.txt` ?
+** Quels sont les droits du fichier `notes.txt` ?
+* Qui est le propriétaire du fichier `/bin/ls` ?
+
