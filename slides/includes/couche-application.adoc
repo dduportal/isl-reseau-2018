@@ -185,5 +185,3 @@ Host: www.isl.be
 ** `Host`
 ** `Location`
 ** `User-Agent`
-
-== Exercices avec HTTP

@@ -172,9 +172,9 @@ image::07-vmplayer-ready.png[width=400,float=middle]
 * Installez le serveur web "Nginx" (nom du paquet : `nginx`)
 * Trouvez tous les ports TCP sur lesquels Nginx écoute
 ** Essayer d'afficher la page web de défaut en utilisant 2 adresses IP différentes
-* Arrêtez le service et vérifier qu'il ne réponds plus aux requêtes HTTP
+* Arrêtez le service et vérifier qu'il ne réponds plus aux requêtes HTTP (Indice: Commandes `systemctl nginx stop` / `systemctl nginx status`)
 ** Vérifiez avec `netstat` et l'option `-p` (Indice : `ps aux | ...`)
-** Redémarrer le service
+** Redémarrer le service (Indice:  `systemctl nginx restart`)
 
 == Exercices avec HTTP 3/3
 
