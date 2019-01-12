@@ -23,3 +23,5 @@
 * [Jeu Linux en ligne pour les commandes] link:http://luffah.xyz/bidules/Terminus/[Terminus] (Merci Guillaume!)
 * [RaspberryPi.org] link:https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md[Creating an access point]
 * [Linux Commandes (Fiche mémoire)] link:http://juliend.github.io/linux-cheatsheet/[]
+* [Reddit] link:https://www.reddit.com/user/JaceTheSaltSculptor[Linux Commande Overview]
+* La référence ABSOLUE en livre : link:https://books.google.be/books/about/Computer_Networks.html?id=Pd-z64SJRBAC&redir_esc=y[Computer Networks by Andrew S. Tanenbaum]

@@ -130,3 +130,8 @@ Droits sur les fichiers : owner, group, others.
 
 * Ls -l en exemple
 * chmod et chgrp
+
+[{invert}]
+== Résumé des commandes
+
+image::linux-commands.jpg[height=600]
