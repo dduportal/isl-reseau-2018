@@ -1,3 +1,4 @@
+
 = Exercices avec une machine virtuelle
 
 == VirtualBox ou VMWare ?
