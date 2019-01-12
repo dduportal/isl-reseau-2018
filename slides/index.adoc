@@ -54,6 +54,7 @@ include::./includes/couche-reseau.adoc[]
 include::./includes/couche-transport.adoc[]
 include::./includes/couche-application.adoc[]
 include::./includes/exercices-vm.adoc[]
+include::./includes/biblio.adoc[]
 
 :leveloffset: -1
 
